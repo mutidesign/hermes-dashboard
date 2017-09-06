@@ -19,7 +19,7 @@
 		color: $danger-color;
 	}
 
-
+	
 }
 
 .hermes-title{
@@ -118,6 +118,7 @@
 		}
 	}
 }
+
 .overviewPage{
 	margin-top: 100px;
 
@@ -145,7 +146,7 @@
 			font-weight: 600;
 		}
 		p{
-			font-size: 1.5em;
+			font-size: 1.7em;
 		}
 	}
 
@@ -175,7 +176,7 @@
 		.danger-notification{
 			width: 40%;
 			animation: first-animation 15s ease-in-out infinite;
-
+			
 		}
 
 		@keyframes first-animation{
@@ -184,7 +185,7 @@
 		        -webkit-transform: translate3d(0, 0, 0);
 			    transform: translate3d(0, 0, 0);
 			  }
-
+			  	
 			  50% {
 			  	-ms-transform: translate3d(15%, 0, 0);
 			  	-webkit-transform: translate3d(15%, 0, 0);
@@ -210,7 +211,7 @@
 			 	-webkit-transform: translate3d(-10%, 0, 0);
 			    transform: translate3d(-10%, 0, 0);
 			  }
-
+			  	
 			  50% {
 			  	-ms-transform: translate3d(10%, 0, 0);
 			  	-webkit-transform: translate3d(10%, 0, 0);
@@ -234,7 +235,7 @@
 			 	-webkit-transform: translate3d(20%, 0, 0);
 			    transform: translate3d(20%, 0, 0);
 			  }
-
+			  	
 			  50% {
 			  	-ms-transform: translate3d(8%, 0, 0);
 			  	-webkit-transform: translate3d(8%, 0, 0);
@@ -258,7 +259,7 @@
 			 	-webkit-transform: translate3d(50%, 0, 0);
 			    transform: translate3d(50%, 0, 0);
 			  }
-
+			  	
 			  50% {
 			  	-ms-transform: translate3d(35%, 0, 0);
 			    -webkit-transform: translate3d(35%, 0, 0);
@@ -282,7 +283,7 @@
 			    -webkit-transform: translate3d(40%, 0, 0);
 			    transform: translate3d(40%, 0, 0);
 			  }
-
+			  	
 			  50% {
 			    -ms-transform: translate3d(25%, 0, 0);
 			    -webkit-transform: translate3d(25%, 0, 0);
@@ -306,7 +307,7 @@
 			    -webkit-transform: translate3d(15%, 0, 0);
 			    transform: translate3d(15%, 0, 0);
 			  }
-
+			  	
 			  50% {
 			    -ms-transform: translate3d(30%, 0,0);
 			    -webkit-transform: translate3d(30%, 0,0);
@@ -353,7 +354,7 @@
 			-webkit-transform: rotate(-39deg);
 			transform: rotate(-39deg);
 		}
-
+	
 	.header{
 		p{
 			color: black;
@@ -397,7 +398,7 @@
 			    -webkit-transform: translate3d(0, 0%, 0);
 			    transform: translate3d(0, 0%, 0);
 			  }
-
+			  	
 			  50% {
 			    -ms-transform: translate3d(0, 15%, 0);
 			    -webkit-transform: translate3d(0, 15%, 0);
@@ -422,7 +423,7 @@
 			    -webkit-transform: translate3d(0, 0%, 0);
 			    transform: translate3d(0, 0%, 0);
 			  }
-
+			  	
 			  50% {
 			    -ms-transform: translate3d(0, -15%, 0);
 			    -webkit-transform: translate3d(0, -15%, 0);
@@ -438,7 +439,7 @@
 	span{
 		color: white;
 	}
-
+	
 }
 
 .gradientPage{
@@ -664,9 +665,9 @@
 		font-size: 35px;
 	}
 	.separator{
-
+		
 		color: black;
-
+	
 		&:after{
 			content: '';
 			width: 100px;
@@ -903,18 +904,16 @@
 		font-weight: 600 !important;
 	}
 
-	.hermes-wrapper{
-		.fa-twitter{
-			color: $info-color  !important;
-		}
+	.fa-twitter{
+		color: $info-color  !important;
+	}
 
-		.fa-facebook-square{
-			color: #6455d6 !important;
-		}
+	.fa-facebook-square{
+		color: #6455d6 !important;
+	}
 
-		.fa-dribbble{
-			color: pink !important;
-		}
+	.fa-dribbble{
+		color: pink !important;
 	}
 
 	.githubPage{
@@ -1037,14 +1036,6 @@
 			left: 55px;
 		}
 
-		.orange-ps{
-			left: 90px;
-		}
-
-		.green-ps{
-			left: 55px;
-		}
-
 		.red-ps{
 			left: 145px;
 		}
@@ -1058,7 +1049,7 @@
 			left: 190px;
 		}
 	}
-	
+
 }
 .card-simple{
 	margin-top: 150px;

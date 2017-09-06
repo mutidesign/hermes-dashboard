@@ -191,7 +191,6 @@
             content: none;
         }
     }
-    
     .navbar-fixed-top {
         -webkit-backface-visibility: hidden;
     }
@@ -378,24 +377,6 @@
         float: right;
     }
 }
-
-@media (max-width: 576px){
-    .ct-label{
-        font-size: 0.5em;
-    }
-
-    .fixed-plugin{
-        .show{
-            .dropdown-menu{
-                width: 230px;
-                left: -70px !important;
-                top: 115px !important;
-            }
-        }
-    }
-}
-
-
 @media (max-width: 480px){
     body{
         font-size: 12px;
