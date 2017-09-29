@@ -668,7 +668,7 @@ body > .navbar-collapse {
 
 .card-header {
   margin-bottom: 20px;
-  padding: 15px 15px 0;
+  padding: 1.25em 1.25em 0;
   background: transparent;
   border: none; }
 
@@ -2410,18 +2410,18 @@ input:focus {
     width: 60px;
     margin-bottom: 20px !important;
     font-weight: 300 !important; }
-  .overviewPage .header p {
+  .overviewPage .card-header p {
     font-size: 1.5em !important; }
   .overviewPage .content p {
     font-size: 1em; }
 
 .card-simple {
   margin: 50px 0; }
-  .card-simple .header h1, .card-simple .header i {
+  .card-simple .card-header h1, .card-simple .card-header i {
     color: #6b6fe4;
     margin: 0;
     font-weight: 600; }
-  .card-simple .header p {
+  .card-simple .card-header p {
     font-size: 1.7em; }
   .card-simple .content {
     color: #9A9A9A;
@@ -2567,7 +2567,7 @@ input:focus {
     -ms-transform: rotate(-39deg);
     -webkit-transform: rotate(-39deg);
     transform: rotate(-39deg); }
-  .tablesPage .header p {
+  .tablesPage .card-header p {
     color: black;
     margin-top: 5px; }
   .tablesPage .content {
@@ -2744,7 +2744,7 @@ input:focus {
     top: 70%;
     right: 25%;
     font-size: 45px; }
-  .iconsPage .header p {
+  .iconsPage .card-header p {
     font-size: 40px; }
 
 .productPage .image {
@@ -2937,15 +2937,6 @@ input:focus {
     text-transform: uppercase;
     font-weight: 600 !important; }
 
-  .fa-twitter {
-    color: #1dc7ea !important; }
-
-  .fa-facebook-square {
-    color: #6455d6 !important; }
-
-  .fa-dribbble {
-    color: pink !important; }
-
   .githubPage .card-simple {
     text-align: center; }
   .githubPage .github-logo {
@@ -3020,10 +3011,10 @@ input:focus {
     left: 190px; } }
 .card-simple {
   margin-top: 150px; }
-  .card-simple .header p {
+  .card-simple .card-header p {
     margin-bottom: 0;
     line-height: 1.2; }
-  .card-simple .header span {
+  .card-simple .card-header span {
     font-size: 0.9em;
     text-transform: uppercase;
     font-weight: 900; }

@@ -128,7 +128,7 @@
 		font-weight: 300 !important;
 	}
 
-	.header p{
+	.card-header p{
 		font-size: 1.5em !important;
 	}
 
@@ -139,7 +139,7 @@
 
 .card-simple{
 	margin: 50px 0;
-	.header{
+	.card-header{
 		h1, i{
 			color: $primary-color;
 			margin: 0;
@@ -355,7 +355,7 @@
 			transform: rotate(-39deg);
 		}
 	
-	.header{
+	.card-header{
 		p{
 			color: black;
 			margin-top: 5px;
@@ -622,7 +622,7 @@
 		right: 25%;
 		font-size: 45px;
 	}
-	.header{
+	.card-header{
 		p{
 			font-size: 40px;
 		}
@@ -904,17 +904,6 @@
 		font-weight: 600 !important;
 	}
 
-	.fa-twitter{
-		color: $info-color  !important;
-	}
-
-	.fa-facebook-square{
-		color: #6455d6 !important;
-	}
-
-	.fa-dribbble{
-		color: pink !important;
-	}
 
 	.githubPage{
 		.card-simple{
@@ -1054,7 +1043,7 @@
 .card-simple{
 	margin-top: 150px;
 
-	.header{
+	.card-header{
 		p{
 			margin-bottom: 0;
 			line-height: 1.2;
