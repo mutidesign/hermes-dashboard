@@ -37,7 +37,7 @@
 		color: $grey-text-main-panel;
 	}
 	.category{
-		margin:0.35em 0 0 0;
+		margin:0;
 		font-weight: 500;
 		font-size: 14px;
 		text-transform: uppercase;
@@ -199,9 +199,11 @@
 	}
 }
 
-.header{
+.card-header{
 	margin-bottom: 20px;
 	padding: 15px 15px 0;
+	background: transparent;
+	border: none;
 }
 
 .card-user{
