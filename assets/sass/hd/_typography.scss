@@ -22,6 +22,10 @@ button.close{
     font-weight: $font-weight-normal;
 }
 
+body{
+    font-size: $font-size-base;
+}
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4{
     font-weight: $font-weight-light;
     margin: $margin-large-vertical 0 $margin-base-vertical;

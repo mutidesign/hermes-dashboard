@@ -60,7 +60,7 @@ body > .navbar-collapse {
       body > .navbar-collapse .nav li a {
         text-decoration: none;
         color: white;
-        border-radius: 6px; }
+        border-radius: 4px; }
         .sidebar .nav li a i,
         body > .navbar-collapse .nav li a i {
           float: left;
@@ -434,7 +434,7 @@ body > .navbar-collapse {
   border-radius: 10px;
   margin-top: 5px;
   padding: 0;
-  border-radius: 10px;
+  border-radius: 16px;
   z-index: 9000;
   position: absolute;
   opacity: 0;
@@ -455,11 +455,11 @@ body > .navbar-collapse {
       .dropdown-menu li a:hover {
         color: black; }
     .dropdown-menu li:first-child {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px; }
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px; }
     .dropdown-menu li:last-child {
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px; }
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px; }
     .dropdown-menu li:hover {
       background: #f5f5f5; }
   .dropdown-menu:after {
@@ -513,16 +513,6 @@ body > .navbar-collapse {
 
 .content {
   padding: 85px 25px 60px; }
-
-.main {
-  padding: 15px 5px;
-  margin-bottom: 60px; }
-  .main > .container-fluid {
-    margin: 0; }
-  .main > h4:first-child {
-    margin: -40px 0 20px 15px;
-    font-size: 24px;
-    font-weight: 500; }
 
 .card {
   background: white;
@@ -580,6 +570,16 @@ body > .navbar-collapse {
   .card a {
     text-decoration: none;
     color: #333333; }
+  .card.main {
+    padding: 15px 5px;
+    border-radius: 16px;
+    margin-bottom: 60px; }
+    .card.main > .container-fluid {
+      margin: 0; }
+    .card.main > h4:first-child {
+      margin: -40px 0 20px 15px;
+      font-size: 24px;
+      font-weight: 500; }
 
 .card-content {
   width: 100%;
@@ -713,30 +713,6 @@ hr {
   border-top: 1px solid #eee;
   margin: 5px 15px; }
 
-/*.money{
-	position: absolute;
-	background: #0098ff;
-	color: white;
-	padding: 3px 15px;
-	border-radius: 16px;
-	top: 25%;
-	left: 56.6%;
-	font-size: 11px;
-	box-shadow: 0 2px 5px 0 rgba(0,152,255,0.4);
-	&:after{
-		content:'';
-		 width: 0; 
-		 height: 0; 
-		 border-left: 5px solid transparent;
-		 border-right: 5px solid transparent;
-		 border-top: 5px solid #0098ff;
-		 position: absolute;
-		 top: 90%;
-		 left: 50%;
-		 transform: translateX(-50%);
-
-	}
-}*/
 .card-blog {
   -webkit-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
   -moz-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
@@ -921,12 +897,15 @@ button.close {
   font-family: 'Montserrat' ,'Helvetica' , Arial, sans-serif;
   font-weight: 400; }
 
+body {
+  font-size: 14px; }
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-weight: 300;
   margin: 30px 0 15px; }
 
 h1, .h1 {
-  font-size: 3.7em; }
+  font-size: 3.2em; }
 
 h2, .h2 {
   font-size: 2.57em; }
@@ -1725,7 +1704,7 @@ Copyright (c) 2015 Daniel Eden
   border-radius: 6px;
   margin: 15px 0; }
   .font-icon-detail i {
-    font-size: 2.85em; }
+    font-size: 2em; }
   .font-icon-detail input {
     margin: 25px auto 0;
     width: 100%;
@@ -1970,7 +1949,7 @@ th {
 
 .btn-lg {
   font-size: 18px;
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 14px 30px;
   font-weight: 400; }
   .btn-lg.btn-round {
@@ -1980,7 +1959,7 @@ th {
 
 .btn-sm {
   font-size: 12px;
-  border-radius: 3px;
+  border-radius: 2px;
   padding: 5px 10px; }
   .btn-sm.btn-round {
     padding: 6px 10px; }
@@ -1989,7 +1968,7 @@ th {
 
 .btn-xs {
   font-size: 12px;
-  border-radius: 3px;
+  border-radius: 2px;
   padding: 1px 5px; }
   .btn-xs.btn-round {
     padding: 2px 5px; }
@@ -2255,7 +2234,7 @@ input:focus {
   transition: background-color .2s linear, opacity .2s linear;
   right: 3px;
   /* there must be 'right' for ps-scrollbar-y-rail */
-  width: 8px; }
+  width: 6px; }
 
 .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
   position: absolute;
@@ -2270,7 +2249,7 @@ input:focus {
   transition: background-color .2s linear;
   right: 0;
   /* there must be 'right' for ps-scrollbar-y */
-  width: 8px; }
+  width: 6px; }
 
 .ps-container:hover.ps-in-scrolling {
   pointer-events: none; }

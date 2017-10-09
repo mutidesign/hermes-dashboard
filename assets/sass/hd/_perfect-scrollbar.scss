@@ -69,7 +69,7 @@
     transition: background-color .2s linear, opacity .2s linear;
     right: 3px;
     /* there must be 'right' for ps-scrollbar-y-rail */
-    width: 8px; }
+    width: 6px; }
     .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
       position: absolute;
       /* please don't change 'position' */
@@ -83,7 +83,7 @@
       transition: background-color .2s linear;
       right: 0;
       /* there must be 'right' for ps-scrollbar-y */
-      width: 8px; }
+      width: 6px; }
   .ps-container:hover.ps-in-scrolling {
     pointer-events: none; }
     .ps-container:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail {

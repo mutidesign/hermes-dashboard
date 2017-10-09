@@ -38,10 +38,6 @@ $card-blue:			#58a7bf;
 
 $navbar-padding-a:				10px 15px;
 
-
-$border-radius-extreme: 		10px !default;
-
-
 $dropdown-shadow:		  1px 2px 3px rgba(0, 0, 0, 0.125);
 
 $default-color:			#888888;
@@ -129,10 +125,10 @@ $font-size-medium:             16px !default;
 $font-size-large:              18px !default;
 $font-size-large-navbar:       20px !default;
 
-$border-radius-small:           3px !default;
-$border-radius-base:            4px !default;
-$border-radius-large:           6px !default;
-$border-radius-extreme:        10px !default;
+$border-radius-small:           2px !default;
+$border-radius-regular:            4px !default;
+$border-radius-large:           10px !default;
+$border-radius-extreme:        16px !default;
 
 $white-color:				#FFFFFF;
 $white-bg:					#FFFFFF;
@@ -142,7 +138,7 @@ $line-height-general:          1.5 !default;
 
 $padding-social-a:		10px 5px;
 
-$font-size-h1:                 3.7em !default;
+$font-size-h1:                 3.2em !default;
 $font-size-h2:                 2.57em !default;
 $font-size-h3:                 2em !default;
 $font-size-h4:                 1.57em !default;
