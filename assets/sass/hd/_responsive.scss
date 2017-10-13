@@ -376,6 +376,19 @@
     .text-blue{
         float: right;
     }
+
+}
+
+@media (max-width: 576px){
+    .fixed-plugin{
+        .show{
+            .dropdown-menu{
+                width: 230px;
+                left: -70px !important;
+                top: 115px !important;
+            }
+        }
+    }
 }
 @media (max-width: 480px){
     body{

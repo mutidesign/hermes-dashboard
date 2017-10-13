@@ -1,6 +1,100 @@
 type = ['','info','success','warning','danger'];
     	
 var seq = 0, delays = 80, durations = 500;
+
+$().ready(function(){
+
+  $pageheader = $('.page-header');
+  $pageheader_img_container = $pageheader.find('.page-header-background');
+
+  $('.fixed-plugin a').click(function(event){
+      // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+        if($(this).hasClass('switch-trigger')){
+            if(event.stopPropagation){
+                event.stopPropagation();
+            }
+            else if(window.event){
+               window.event.cancelBubble = true;
+            }
+        }
+    });
+
+     $('.fixed-plugin .badge').click(function(){
+
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+
+        var new_color = $(this).data('color');
+
+        $pageheader.attr('data-color',new_color);
+
+    });
+
+    $('.fixed-plugin .img-holder').click(function(){
+
+        $(this).parent('li').siblings().removeClass('active');
+        $(this).parent('li').addClass('active');
+
+
+        var new_image = $(this).find("img").attr('src');
+
+        $pageheader_img_container.fadeOut('fast', function(){
+           $pageheader_img_container.css('background-image','url("' + new_image + '")');
+           $pageheader_img_container.fadeIn('fast');
+        });
+
+    });
+
+       $('.switch input').change(function(){
+        $input = $(this);
+
+        if($input.is(':checked')){
+            $pageheader_img_container.fadeIn('fast');
+            $pageheader.attr('data-image','#')
+            background_image = true;
+        } else {
+            $pageheader.removeAttr('data-image');
+            $pageheader_img_container.fadeOut('fast');
+            background_image = false;
+        }
+    });
+
+       $('#twitter').sharrre({
+      share: {
+        twitter: true
+      },
+      enableHover: false,
+      enableTracking: false,
+      buttons: { twitter: {}},
+      click: function(api, options){
+        api.simulateClick();
+        api.openPopup('twitter');
+      },
+      template: '<i class="fa fa-twitter"></i>',
+      url: 'http://demos.creative-tim.com/light-bootstrap-dashboard'
+    });
+
+    $('#facebook').sharrre({
+      share: {
+        facebook: true
+      },
+      buttons: {
+        facebook: {}
+      },
+
+      enableHover: false,
+      enableTracking: false,
+      click: function(api, options){
+        api.simulateClick();
+        api.openPopup('facebook');
+      },
+      template: '<i class="fa fa-facebook-square"></i>',
+      url: 'http://demos.creative-tim.com/light-bootstrap-dashboard'
+    });
+
+
+});
+
 demo = {
    initPickColor: function(){
         $('.pick-class-label').click(function(){
