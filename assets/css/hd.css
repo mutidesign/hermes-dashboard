@@ -2072,7 +2072,7 @@ tr:hover [class*="fa"] {
   border: 1px solid #d4d4d4;
   margin: 0 2px;
   padding: 0.35em 0.9em;
-  border-radius: 50%;
+  border-radius: 2px;
   transition: 0.2s ease; }
   .pagination li a {
     text-decoration: none;

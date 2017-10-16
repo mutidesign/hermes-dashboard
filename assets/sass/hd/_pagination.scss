@@ -3,7 +3,7 @@
 		border: 1px solid $input-grey;
 		margin: 0 2px;
 		padding: 0.35em 0.9em;
-		border-radius: 50%;
+		border-radius: $border-radius-small;
 		transition: 0.2s ease;
 		a{
 			text-decoration: none;
