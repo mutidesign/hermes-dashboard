@@ -71,7 +71,7 @@ $().ready(function(){
         api.openPopup('twitter');
       },
       template: '<i class="fa fa-twitter"></i>',
-      url: 'http://demos.creative-tim.com/light-bootstrap-dashboard'
+      url: 'https://mutidesign.github.io/hermes-dashboard/examples/dashboard.html'
     });
 
     $('#facebook').sharrre({
@@ -89,7 +89,7 @@ $().ready(function(){
         api.openPopup('facebook');
       },
       template: '<i class="fa fa-facebook-square"></i>',
-      url: 'http://demos.creative-tim.com/light-bootstrap-dashboard'
+      url: 'https://mutidesign.github.io/hermes-dashboard/examples/dashboard.html'
     });
 
 
