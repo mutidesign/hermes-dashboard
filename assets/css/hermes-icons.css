@@ -163,331 +163,403 @@ License - nucleoapp.com/license/
 -------------------------*/
 
 .nc-active-40::before {
-    content: "\ea01";
-}
-
-.nc-air-baloon::before {
     content: "\ea02";
 }
 
-.nc-align-center::before {
+.nc-air-baloon::before {
     content: "\ea03";
 }
 
-.nc-align-left-2::before {
+.nc-album-2::before {
     content: "\ea04";
 }
 
-.nc-ambulance::before {
+.nc-align-center::before {
     content: "\ea05";
 }
 
-.nc-app::before {
+.nc-align-left-2::before {
     content: "\ea06";
 }
 
-.nc-atom::before {
+.nc-ambulance::before {
     content: "\ea07";
 }
 
-.nc-badge::before {
+.nc-app::before {
     content: "\ea08";
 }
 
-.nc-bag-17::before {
+.nc-archive-2::before {
     content: "\ea09";
 }
 
-.nc-bars::before {
+.nc-atom::before {
     content: "\ea0a";
 }
 
-.nc-bell-55::before {
+.nc-badge::before {
     content: "\ea0b";
 }
 
-.nc-bold-down::before {
+.nc-bag-17::before {
     content: "\ea0c";
 }
 
-.nc-bold-left::before {
+.nc-basket::before {
     content: "\ea0d";
 }
 
-.nc-bold-right::before {
+.nc-bell-55::before {
     content: "\ea0e";
 }
 
-.nc-bold-up::before {
+.nc-bold-down::before {
     content: "\ea0f";
 }
 
-.nc-bold::before {
+.nc-bold-left::before {
     content: "\ea10";
 }
 
-.nc-book-bookmark::before {
+.nc-bold-right::before {
     content: "\ea11";
 }
 
-.nc-books::before {
+.nc-bold-up::before {
     content: "\ea12";
 }
 
-.nc-box-2::before {
+.nc-bold::before {
     content: "\ea13";
 }
 
-.nc-briefcase-24::before {
+.nc-book-bookmark::before {
     content: "\ea14";
 }
 
-.nc-building::before {
+.nc-books::before {
     content: "\ea15";
 }
 
-.nc-bulb-61::before {
+.nc-box-2::before {
     content: "\ea16";
 }
 
-.nc-bullet-list-67::before {
+.nc-briefcase-24::before {
     content: "\ea17";
 }
 
-.nc-bus-front-12::before {
+.nc-building::before {
     content: "\ea18";
 }
 
-.nc-button-pause::before {
+.nc-bulb-61::before {
     content: "\ea19";
 }
 
-.nc-button-play::before {
+.nc-bullet-list-67::before {
     content: "\ea1a";
 }
 
-.nc-button-power::before {
+.nc-bus-front-12::before {
     content: "\ea1b";
 }
 
-.nc-calendar-grid-58::before {
+.nc-button-pause::before {
     content: "\ea1c";
 }
 
-.nc-camera-compact::before {
+.nc-button-play::before {
     content: "\ea1d";
 }
 
-.nc-caps-small::before {
+.nc-button-power::before {
     content: "\ea1e";
 }
 
-.nc-chart-bar-32::before {
+.nc-calendar-grid-58::before {
     content: "\ea1f";
 }
 
-.nc-chart-pie-35::before {
+.nc-camera-compact::before {
     content: "\ea20";
 }
 
-.nc-chat-round::before {
+.nc-caps-small::before {
     content: "\ea21";
 }
 
-.nc-check-bold::before {
+.nc-cart::before {
     content: "\ea22";
 }
 
-.nc-circle-08::before {
+.nc-chart-bar-32::before {
     content: "\ea23";
 }
 
-.nc-compass-04::before {
+.nc-chart-pie-35::before {
     content: "\ea24";
 }
 
-.nc-controller::before {
+.nc-chat-round::before {
     content: "\ea25";
 }
 
-.nc-credit-card::before {
+.nc-check-bold::before {
     content: "\ea26";
 }
 
-.nc-delivery-fast::before {
+.nc-circle-08::before {
     content: "\ea27";
 }
 
-.nc-diamond::before {
+.nc-cloud-download-95::before {
     content: "\ea28";
 }
 
-.nc-email-83::before {
+.nc-cloud-upload-96::before {
     content: "\ea29";
 }
 
-.nc-fat-add::before {
+.nc-compass-04::before {
     content: "\ea2a";
 }
 
-.nc-fat-delete::before {
+.nc-controller::before {
     content: "\ea2b";
 }
 
-.nc-fat-remove::before {
+.nc-credit-card::before {
     content: "\ea2c";
 }
 
-.nc-favourite-28::before {
+.nc-curved-next::before {
     content: "\ea2d";
 }
 
-.nc-glasses-2::before {
+.nc-delivery-fast::before {
     content: "\ea2e";
 }
 
-.nc-hat-3::before {
+.nc-diamond::before {
     content: "\ea2f";
 }
 
-.nc-headphones::before {
+.nc-email-83::before {
     content: "\ea30";
 }
 
-.nc-html5::before {
+.nc-fat-add::before {
     content: "\ea31";
 }
 
-.nc-istanbul::before {
+.nc-fat-delete::before {
     content: "\ea32";
 }
 
-.nc-key-25::before {
+.nc-fat-remove::before {
     content: "\ea33";
 }
 
-.nc-laptop::before {
+.nc-favourite-28::before {
     content: "\ea34";
 }
 
-.nc-like-2::before {
+.nc-folder-17::before {
     content: "\ea35";
 }
 
-.nc-lock-circle-open::before {
+.nc-glasses-2::before {
     content: "\ea36";
 }
 
-.nc-map-big::before {
+.nc-hat-3::before {
     content: "\ea37";
 }
 
-.nc-mobile-button::before {
+.nc-headphones::before {
     content: "\ea38";
 }
 
-.nc-money-coins::before {
+.nc-html5::before {
     content: "\ea39";
 }
 
-.nc-note-03::before {
+.nc-istanbul::before {
     content: "\ea3a";
 }
 
-.nc-notification-70::before {
+.nc-key-25::before {
     content: "\ea3b";
 }
 
-.nc-palette::before {
+.nc-laptop::before {
     content: "\ea3c";
 }
 
-.nc-pin-3::before {
+.nc-like-2::before {
     content: "\ea3d";
 }
 
-.nc-planet::before {
+.nc-lock-circle-open::before {
     content: "\ea3e";
 }
 
-.nc-refresh-02::before {
+.nc-map-big::before {
     content: "\ea3f";
 }
 
-.nc-ruler-pencil::before {
+.nc-mobile-button::before {
     content: "\ea40";
 }
 
-.nc-satisfied::before {
+.nc-money-coins::before {
     content: "\ea41";
 }
 
-.nc-scissors::before {
+.nc-note-03::before {
     content: "\ea42";
 }
 
-.nc-send::before {
+.nc-notification-70::before {
     content: "\ea43";
 }
 
-.nc-settings-gear-65::before {
+.nc-palette::before {
     content: "\ea44";
 }
 
-.nc-settings::before {
+.nc-paper-diploma::before {
     content: "\ea45";
 }
 
-.nc-single-02::before {
+.nc-pin-3::before {
     content: "\ea46";
 }
 
-.nc-single-copy-04::before {
+.nc-planet::before {
     content: "\ea47";
 }
 
-.nc-sound-wave::before {
+.nc-ruler-pencil::before {
     content: "\ea48";
 }
 
-.nc-spaceship::before {
+.nc-satisfied::before {
     content: "\ea49";
 }
 
-.nc-support-16::before {
+.nc-scissors::before {
     content: "\ea4a";
 }
 
-.nc-tablet-button::before {
+.nc-send::before {
     content: "\ea4b";
 }
 
-.nc-time-alarm::before {
+.nc-settings-gear-65::before {
     content: "\ea4c";
 }
 
-.nc-trophy::before {
+.nc-settings::before {
     content: "\ea4d";
 }
 
-.nc-tv-2::before {
+.nc-single-02::before {
     content: "\ea4e";
 }
 
-.nc-umbrella-13::before {
+.nc-single-copy-04::before {
     content: "\ea4f";
 }
 
-.nc-user-run::before {
+.nc-sound-wave::before {
     content: "\ea50";
 }
 
-.nc-watch-time::before {
+.nc-spaceship::before {
     content: "\ea51";
 }
 
-.nc-zoom-split-in::before {
+.nc-square-pin::before {
     content: "\ea52";
+}
+
+.nc-support-16::before {
+    content: "\ea53";
+}
+
+.nc-tablet-button::before {
+    content: "\ea54";
+}
+
+.nc-tag::before {
+    content: "\ea55";
+}
+
+.nc-tie-bow::before {
+    content: "\ea56";
+}
+
+.nc-time-alarm::before {
+    content: "\ea57";
+}
+
+.nc-trophy::before {
+    content: "\ea58";
+}
+
+.nc-tv-2::before {
+    content: "\ea59";
+}
+
+.nc-umbrella-13::before {
+    content: "\ea5a";
+}
+
+.nc-user-run::before {
+    content: "\ea5b";
+}
+
+.nc-vector::before {
+    content: "\ea5c";
+}
+
+.nc-watch-time::before {
+    content: "\ea5d";
+}
+
+.nc-world::before {
+    content: "\ea5e";
+}
+
+.nc-zoom-split-in::before {
+    content: "\ea5f";
+}
+
+.nc-collection::before {
+    content: "\ea60";
+}
+
+.nc-image::before {
+    content: "\ea61";
+}
+
+.nc-shop::before {
+    content: "\ea62";
+}
+
+.nc-ungroup::before {
+    content: "\ea63";
+}
+
+.nc-world-2::before {
+    content: "\ea64";
+}
+
+.nc-ui-04::before {
+    content: "\ea65";
 }
 
 
