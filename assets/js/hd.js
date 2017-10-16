@@ -2,17 +2,18 @@
 var navbar_initialized = false;
 
 var seq = 0, delays = 80, durations = 500;
-(function(){
+ (function(){
+     isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
 
-       // if we are on windows OS we activate the perfectScrollbar function
-       $(' .sidebar-wrapper, .sidebar-wrapper, .main-panel').perfectScrollbar();
+     if (isWindows && !$('body').hasClass('sidebar-mini')){
+        // if we are on windows OS we activate the perfectScrollbar function
+        $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
 
-       $('html').addClass('perfect-scrollbar-on');
-  	
-  		if($("html").hasClass("nav-open")){
-  			$('.collapse').perfectScrollbar();
-  		}
-})();
+        $('html').addClass('perfect-scrollbar-on');
+    } else {
+        $('html').addClass('perfect-scrollbar-off');
+    }
+ })();
 
 $(document).ready(function(){
 	window_width = $(window).width();
