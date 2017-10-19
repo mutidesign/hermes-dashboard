@@ -12,7 +12,7 @@ Once you have downloaded/cloned the repo and opened it, you will find the follow
 			|--demo.js
 			|--hd.js
 		|--sass
-	|--documentation
+	|--docs
 	|--examples
 
 ```
