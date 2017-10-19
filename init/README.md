@@ -1,6 +1,6 @@
 # [Hermes Dashboard](https://www.facebook.com/) [![version][version-badge]][CHANGELOG] [![license][license-badge]][LICENSE]
 
-![alt text](https://raw.githubusercontent.com/mutidesign/hermes-dashboard/master/assets/img/product-thumbnail.jpg "Hermes Dashboard")
+![alt text](assets/img/freedom.jpg)
 
 ## Short desciption and usage
 
