@@ -119,7 +119,7 @@ demo = {
               showPoint: true,
               showLine: true,
               height: "400px",
-              width: "2000px",
+              width: "120%",
               axisX: {
                 showGrid: false
               },
