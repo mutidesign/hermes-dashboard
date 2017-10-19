@@ -1343,6 +1343,14 @@ h1 .subtitle {
     color: #9A9A9A;
     font-size: 14px; }
 
+@media (min-width: 1600px) {
+  #chartPresentation {
+    bottom: -50px; }
+    #chartPresentation .ct-area {
+      fill: white; }
+
+  .waves {
+    display: none; } }
 @media (max-width: 1200px) {
   .info {
     margin-right: 0; }
@@ -3373,4 +3381,4 @@ input:focus {
     border-color: #008bd0;
     background: #008bd0; }
 
-
+/*# sourceMappingURL=hd.css.map */

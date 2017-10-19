@@ -1,3 +1,14 @@
+@media (min-width: 1600px){
+    #chartPresentation{
+        bottom: -50px;
+        .ct-area{
+            fill:white;
+        }
+    }
+    .waves{
+        display: none;
+    }
+}
 @media (max-width: 1200px){
     .info{
         margin-right: 0;
