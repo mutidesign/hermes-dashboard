@@ -26,6 +26,7 @@ const
   prettify      = require('gulp-jsbeautifier'),
   clean         = require('gulp-clean'),
   git           = require('gulp-git'), // https://www.npmjs.com/package/gulp-git
+  ghPages       = require('gulp-gh-pages'),
   zip           = require('gulp-zip');
 ;
 
@@ -232,6 +233,10 @@ gulp.task('prettify-js', function() {
     .pipe(gulp.dest('dist/assets/js'));
 });
 
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
 
 gulp.task('prettify',['prettify-html','prettify-css','prettify-js'], () => {
     gutil.log('Finished prettify');
