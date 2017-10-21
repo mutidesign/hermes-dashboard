@@ -35,7 +35,7 @@ var browsersync = false;
 
 // Move HTML settings
 const move_html = {
-  src           : dir.src + '**/*.html',
+  src           : dir.src + 'examples/**/*.html',
   build         : dir.build
 };
 
@@ -57,6 +57,19 @@ gulp.task('move_sass', () => {
   return gulp.src(move_sass.src)
     .pipe(newer(move_sass.build))
     .pipe(gulp.dest(move_sass.build));
+});
+
+// Move SASS folder
+const move_docs = {
+    src          : 'docs/**/*',
+    build        : dir.build + 'docs/',
+}
+
+// copy Sass files
+gulp.task('move_docs', () => {
+  return gulp.src(move_docs.src)
+    .pipe(newer(move_docs.build))
+    .pipe(gulp.dest(move_docs.build));
 });
 
 // copy SASS parent
@@ -153,19 +166,6 @@ gulp.task('zip', function () {
 //     .pipe(gulp.dest('dist/'))
 // });
 
-
-
-// Move HTML settings
-const live_demo = {
-  src           : 'dist/**/*',
-  build         : '../ct-freebies/public/' + productname + '/'
-};
-
-gulp.task('move_live_demo', () => {
-  return gulp.src(live_demo.src)
-    .pipe(newer(live_demo.build))
-    .pipe(gulp.dest(live_demo.build));
-});
 
 gulp.task('prettify-html', function() {
   gulp.src(['./**/*.html'])
