@@ -168,7 +168,7 @@ gulp.task('zip', function () {
 
 
 gulp.task('prettify-html', function() {
-  gulp.src(['./**/*.html'])
+  gulp.src(['./examples/**/*.html'])
     .pipe(prettify({
         "html": {
             "allowed_file_extensions": ["htm", "html", "xhtml", "shtml", "xml", "svg"],
@@ -185,7 +185,7 @@ gulp.task('prettify-html', function() {
             "wrap_line_length": 0 // Lines should wrap at next opportunity after this number of characters (0 disables)
         }
     }))
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('dist/examples/'));
 });
 
 gulp.task('prettify-css', function() {
@@ -242,9 +242,8 @@ gulp.task('prettify',['prettify-html','prettify-css','prettify-js'], () => {
     gutil.log('Finished prettify');
 });
 
-
 // run all tasks
-gulp.task('build', ['prettify','move_html', 'move_css','move_js','move_sass_parent','move_sass', 'images', 'move_fonts']);
+gulp.task('build', ['prettify', 'move_docs','move_css','move_js','move_sass_parent','move_sass', 'images', 'move_fonts']);
 
 // run all tasks
 // gulp.task('live_demo', ['move_html', 'move_css','move_js','move_sass_parent','move_sass', 'images', 'move_fonts','clean_scss']);
