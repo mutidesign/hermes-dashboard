@@ -205,7 +205,7 @@ gulp.task('prettify-css', function() {
 });
 
 gulp.task('prettify-js', function() {
-  gulp.src(['./assets/js/**/*.js'])
+  gulp.src(['./assets/js/**/*.js','!./assets/js/**/*.min.js'])
     .pipe(prettify({
         "js": {
             "allowed_file_extensions": ["js", "json", "jshintrc", "jsbeautifyrc"],
