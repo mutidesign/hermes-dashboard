@@ -101,7 +101,7 @@ gulp.task('move_fonts', () => {
 
 
 gulp.task('clean_scss', function () {
-    return gulp.src(dir.build + '/assets/css/now-ui-dashboard.scss', {read: false})
+    return gulp.src(dir.build + '/assets/css/' +  productname + '.scss', {read: false})
         .pipe(clean());
 });
 
