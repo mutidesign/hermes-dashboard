@@ -1,27 +1,50 @@
-## Short description and usage
+# [Hermes Dashboard](https://www.facebook.com/) [![version][version-badge]][CHANGELOG] [![license][license-badge]][LICENSE]
 
-[Vue Paper Dashboard](https://github.com/cristijora/vue-paper-dashboard) is a beautiful resource built over Bootstrap and Vue. It will help you get started developing dashboards in no time. Vue Paper Dashboard is a Vue ported version of the [Original Paper Dashboard](https://www.creative-tim.com/product/paper-dashboard).
-Using the Dashboard is pretty simple but requires basic knowledge of Javascript, [Vue](https://vuejs.org/v2/guide/) and [Vue-Router](https://router.vuejs.org/en/).
+![alt text](https://raw.githubusercontent.com/mutidesign/hermes-dashboard/master/assets/img/product-thumbnail.jpg "Hermes Dashboard")
 
-Vue Paper Dashboard was coded by [Cristi Jora](https://github.com/cristijora) and the design was made by [Creative Tim](https://www.creative-tim.com/?ref=pdf-vuejs-doc).
+**[Hermes Dashboard](https://www.facebook.com/)** is an admin dashboard template designed to be beautiful and simple. It is built on top of Bootstrap 4 Beta and it is fully responsive. It comes with a big collection of elements that will offer you multiple possibilities to create the app that best fits your needs. It can be used to create admin panels, project management systems, web applications backend, CMS or CRM.
 
-## Getting started
+The Hermes Dashboard is built on top of Bootstrap 4 Beta, so you can safely use it on your existing or new Bootstrap project. No line of code from Bootstrap 4 was changed, so you don't have to worry about undesired effect in your work.
 
-Vue Paper Dashboard is built on top of Bootstrap 3, Vue and Vue-router.
-To get started do the following steps:
+We provide all the necessary CSS resources. So, to immediately change or get started with our design, include the "css/style.css" in your HTML template. Your project will get the new look.
 
-1. Clone or download the [Project](https://github.com/cristijora/vue-paper-dashboard)
-2. Make sure you have [node.js](https://nodejs.org/en/) installed
-3. Type `npm install` in the source folder where `package.json` is located
-4. Type `npm run dev` to start the development server
+To jump start your project, you can use our start-up template where all the files are already included and ready to use. If you do however, want to start from scratch, you can see the file structure below. The core JavaScript is contained in "js/hd.js". Some functions are called from "js/demo.js" because they are presented only for demo purpose, you can check there how they are working and duplicate their effect on your project. For the other files, you should add them if you use the specific element inside your page.
 
-The repo uses [vue-cli](https://github.com/vuejs/vue-cli) scaffolding which takes care
-of the development setup with webpack and all the necessary modern tools to make web development faster and easier.
+## Links
 
-#### Npm tasks:
-- `npm run dev` - starts a development server on `localhost:8080` with live-reload
-- `npm run build` - builds the app for production with javascript minification and versioning
-- `npm run unit` - Runs unit tests located under `test\unit` folder. There are couple of tests written for you to get a better idea on how to run and write Vue unit tests
-- `npm run unit:watch` - Runs unit tests while listening for any changes in the project. This way you can develop new features and make sure that your old components work as expected without running unit tests every time.
-- `npm run e2e` - Runs end to end tests. The command and the setup for end to end tests is provided by vue-cli. If you need and have the necessity to write end to end tests, feel free to write them under `test\e2e` folder
-- `npm run test` - Runs both unit and end to end tests.
++ [Live Preview]
+
+### What's included
+
+Once you have downloaded/cloned the repo and opened it, you will find the following structure:
+
+```
+Hermes dashboard
+	|--assets
+		|--css
+		|--fonts
+		|--img
+		|--js
+			|--core
+			|--plugins
+			|--demo.js
+			|--hd.js
+		|--sass
+	|--docs
+	|--examples
+
+```
+
+## API Keys
+
+### How to setup Google API Keys
+
+1. Go to [https://developers.google.com/maps/documentation/javascript/get-api-key](https://developers.google.com/maps/documentation/javascript/get-api-key)
+2. Scroll to the "Get an API key" Title and press "Get a Key" Button
+3. Choose a name for your project then press on Create and Enable API
+4. Get the Key and place it in your project where is this script:```<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"><script>```
+
+[CHANGELOG]: ./CHANGELOG.md
+[LICENSE]: ./LICENSE
+[version-badge]: https://img.shields.io/badge/version-1.0.0-blue.svg
+[license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
