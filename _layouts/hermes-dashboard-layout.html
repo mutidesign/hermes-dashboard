@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+{% include path/path-assets.html %}
+{% include head.html %}
+
+</head>
+
+<body>
+	<div class="wrapper">
+
+	    {% include sidebar.html %}
+
+	    <div class="main-panel">
+	    	
+	    	{% include navbar.html %}
+	    	{% include page-header.html %}
+
+	    <div class="content">
+
+	    	<div class="card main over-header" data-color="{{ page.data-color }}">
+
+	    		{{ content }}
+
+	    	</div>
+
+	    </div>
+
+	    {% include footer.html %}
+
+	    </div>
+
+	</div>
+
+	<div class="fixed-plugin">
+    <div class="dropdown show-dropdown">
+        <a href="#" data-toggle="dropdown">
+        <i class="fa fa-cog fa-2x"> </i>
+        </a>
+        <ul class="dropdown-menu">
+            <li class="header-title">Page Header Style</li>
+            <li class="adjustments-line">
+                <a href="javascript:void(0)" class="switch-trigger">
+                    <p>Background Image</p>
+                    <div class="switch"
+                        data-on-label="ON"
+                        data-off-label="OFF">
+                        <input type="checkbox" checked/>
+                    </div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+            <li class="adjustments-line">
+                <a href="javascript:void(0)" class="switch-trigger">
+                    <p>Filters</p>
+                    <div class="pull-right">
+                        <span class="badge filter" data-color="black"></span>
+                        <span class="badge filter badge-azure" data-color="light-blue"></span>
+                        <span class="badge filter badge-green" data-color="green"></span>
+                        <span class="badge filter badge-orange" data-color="orange"></span>
+                        <span class="badge filter badge-red" data-color="red"></span>
+                        <span class="badge filter badge-purple active" data-color="purple"></span>
+                    </div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+            <li class="header-title">Page Header Images</li>
+            <li>
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="https://images.unsplash.com/photo-1493585552824-131927c85da2?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=">
+                </a>
+            </li>
+            <li>
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="https://images.unsplash.com/photo-1496687421442-315106b0da41?dpr=1&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=">
+                </a>
+            </li>
+            <li>
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="https://images.unsplash.com/photo-1470219556762-1771e7f9427d?dpr=1&auto=format&fit=crop&w=1500&h=844&q=80&cs=tinysrgb&crop=">
+                </a>
+            </li>
+            <li class="active">
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=">
+                </a>
+            </li>
+
+            <li class="button-container">
+                <div class="">
+                    <a href="https://github.com/mutidesign/hermes-dashboard/archive/master.zip" target="_blank" class="btn btn-info btn-block btn-fill">Download, it's free!</a>
+                </div>
+            </li>
+
+            <li class="header-title" id="sharrreTitle">Thank you for sharing!</li>
+
+            <li class="button-container">
+				<button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i></button>
+                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i class="fa fa-facebook-square"></i></button>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+</body>
+
+	{% include js/script.html %}
+
+</html>
