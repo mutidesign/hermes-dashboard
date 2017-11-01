@@ -6,7 +6,7 @@ kramdown:
   auto_ids:     true
 
 # Permalinks
-permalink:      pretty
+#permalink:      pretty
 
 # Server
 source:         "."
