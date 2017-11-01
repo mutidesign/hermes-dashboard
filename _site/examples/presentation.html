@@ -1,9 +1,88 @@
----
-layout: hermes-dashboard-pages
-brand: presentation
----
+<!doctype html>
+<html lang="en">
+<head>
+    
 
-<section class="productPage">
+
+
+
+    
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Hermes-Dashboard</title>
+
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <!--  Bootstrap core CSS  -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+
+  <!--  Hermes Dashboard CSS    -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/hd.css">
+
+  <!--  Fonts and Icons   -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/hermes-icons.css">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Lobster|Montserrat:400,500,600' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <div class="hermes-wrapper">
+        <div class="sidebar d-lg-none">
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="#">
+                    Hermes
+                    </a>
+                </div>
+                <ul class="nav">
+                </ul>
+            </div>
+        </div>
+            <nav class="navbar navbar-expand-md">
+                <div class="container">
+                     <button class="navbar-toggler d-sm-block d-lg-none" type="button" data-toggle="collapse"  aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                      </button>
+                      <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li class="nav-item">
+                                <a href="dashboard.html" class="hermes-title nav-link d-none d-lg-block">hermes</a>
+                            </li>
+                        </ul><!--navbar left-->
+
+                        <ul class="navbar-nav ml-auto social-icons">
+                            <li class="nav-item text-center">
+                                <button class="btn btn-warning btn-round">Download Now</button>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" >
+                                    <i class="fa fa-facebook-square"></i>
+                                    <p class="d-lg-none facebook-logo">facebook</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa fa-twitter"></i>
+                                    <p class="d-lg-none twitter-logo">twitter</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" >
+                                    <i class="fa fa-dribbble"></i>
+                                    <p class="d-lg-none dribbble-logo">dribbble</p>
+                                </a>
+                            </li>
+                        </ul><!--navbar right-->
+                      </div>  
+                     </div>
+                </nav>
+
+                <section class="productPage">
 			<div class="image" style="background-image: url('../assets/img/example.jpg')"></div>
 			<div class="mainTitle">
 				<ul>
@@ -282,3 +361,58 @@ brand: presentation
 		  </div>
 	   </footer><!--footer-->
 	</section>
+
+                </div>
+
+
+
+   
+</body>
+
+    	<!-- Core JS Files -->
+	<script src="../assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="../assets/js/core/jquery-ui.min.js"></script>
+	<script src="../assets/js/core/popper.min.js"></script>
+	<script src="../assets/js/core/bootstrap.min.js"></script>
+
+
+	<!-- Plugin for Charts, full documentation here: https://gionkunz.github.io/chartist-js/ -->
+	<script src="../assets/js/plugins/chartist.min.js"></script>
+
+	<!-- Plugin for Notifications, full documentation here: http://bootstrap-notify.remabledesigns.com/ -->
+    <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin  -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
+	<!-- Hermes Dashboard javascript methods -->
+	<script src="../assets/js/hd.js"></script>
+
+	<!-- Hermes Dashboard DEMO methods, don't include it in your project! -->
+	<script src="../assets/js/demo.js"></script>
+
+	<script>
+
+	$(document).ready(function(){
+
+		
+
+		
+
+			demo.presentationChartist();
+
+			$("html").removeClass("perfect-scrollbar-on");
+			window_width = $(window).width();
+
+			if(window_width >= 992){
+				big_image = $('.productPage > .image');
+
+				$(window).on('scroll', hermesdashboard.checkScrollForParallax);
+			}
+
+		
+	});
+
+	</script>
+
+</html>
