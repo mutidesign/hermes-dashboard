@@ -251,6 +251,15 @@ body > .navbar-collapse{
 		position: absolute;
 		right: 20px;
 	}
+
+	.navbar{
+	padding: 15px 30px 15px 15px;
+	width: 100%;
+	z-index: 1000;
+	min-height: 60px;
+	position: absolute;
+
+}
 }
 
 .page-header{
@@ -325,14 +334,6 @@ body > .navbar-collapse{
 	background-position: center center;
 	background-size: cover;
 	}
-}
-.navbar{
-	padding: 15px 30px 15px 15px;
-	width: 100%;
-	z-index: 1000;
-	min-height: 60px;
-	position: absolute;
-
 }
 
 .navbar-nav{
@@ -439,7 +440,7 @@ body > .navbar-collapse{
 		padding-left: 15px;
 		font-size: 12px;
 		opacity: 0.5;
-		font-family: 'Montserrat';
+		font-family: 'Montserrat', sans-serif;
 		width: 590px !important;
 		&:focus{
 			background: transparent;

@@ -54,7 +54,7 @@
 	}
 	.card-description{
 		color:$grey-text-main-panel;
-		font-family: 'Montserrat';
+		font-family: 'Montserrat', sans-serif;
 		margin-bottom: 5px;
 		margin-top: 15px;
 	}
@@ -209,6 +209,8 @@
 }
 
 .card-user{
+	max-width: 300px;
+	margin: 10px auto;
     .image{
         height: 110px;
         overflow: hidden;

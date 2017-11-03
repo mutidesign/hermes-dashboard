@@ -72,6 +72,10 @@
     &.alert-with-icon{
         padding-left: 65px;
     }
+
+    .alert-link{
+      color: $white-color;
+    }
 }
 .alert-info{
      background-color: $info-color;
@@ -84,6 +88,23 @@
 }
 .alert-danger {
      background-color: $danger-color;
+}
+
+.alert-primary{
+    background-color: $primary-color;
+}
+
+.alert-secondary{
+    background-color: $secondary-color;
+}
+
+.alert-light{
+  background-color: transparent;
+  color: $alert-light;
+}
+
+.alert-dark{
+  background-color: $alert-dark;
 }
 
 button.close[data-notify="dismiss"]

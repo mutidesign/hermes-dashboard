@@ -45,28 +45,6 @@
 		}
 	}
 
-		&:after{
-		content: " ";
-		border-bottom: 11px solid white;
-		border-right: 11px solid transparent;
-		border-left: 11px solid transparent;
-		height: 10px;
-		width: 10px;
-		top: -11px;
-		left: 35px;
-		position: absolute;
-	}
-	&:before{
-		content: " ";
-		border-bottom:  11px solid grey;
-		border-right: 11px solid transparent;
-		border-left: 11px solid transparent;
-		height: 11px;
-		width: 11px;
-		top: -11px;
-		left: 36px;
-		position: absolute;
-	}
 }
 
 .menu-2{
@@ -102,5 +80,32 @@
 
 	&:hover{
 		background-color: $smoke-bg;
+	}
+}
+
+.navbar{
+	.dropdown-menu{
+		&:after{
+			content: " ";
+			border-bottom: 11px solid white;
+			border-right: 11px solid transparent;
+			border-left: 11px solid transparent;
+			height: 10px;
+			width: 10px;
+			top: -11px;
+			left: 35px;
+			position: absolute;
+		}
+		&:before{
+			content: " ";
+			border-bottom:  11px solid grey;
+			border-right: 11px solid transparent;
+			border-left: 11px solid transparent;
+			height: 11px;
+			width: 11px;
+			top: -11px;
+			left: 36px;
+			position: absolute;
+		}
 	}
 }

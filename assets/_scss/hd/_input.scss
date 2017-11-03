@@ -24,6 +24,7 @@ label{
     font-size: 1em;
 	&:focus{
 		border-color: #b9b9b9;
+        box-shadow: none;
 	}
 	&:placeholder{
 		color: red;
