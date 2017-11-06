@@ -6,14 +6,14 @@ body,
 }
 a{
   color: $info-color;
-    
+
   &:hover, &:focus{
-     color: $grey-text-main-panel; 
-     text-decoration: none; 
+     color: $grey-text-main-panel;
+     text-decoration: none;
   }
 }
 
-a:focus, a:active, 
+a:focus, a:active,
 button::-moz-focus-inner,
 input::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
@@ -30,8 +30,8 @@ input:focus {
 }
 
 /*           Animations              */
-.form-control, 
-.input-group-addon, 
+.form-control,
+.input-group-addon,
 .tagsinput,
 .navbar,
 .navbar .alert{
@@ -53,10 +53,10 @@ input:focus {
 .margin-top{
     margin-top: 50px;
 }
-
-.wrapper{
-    position: relative;
-    top: 0;
-    height: 100vh;
+.perfect-scrollbar-on{
+  .wrapper{
+      position: relative;
+      top: 0;
+      height: 100vh;
+  }
 }
-

@@ -917,7 +917,6 @@ h1 .subtitle {
     top: 50%;
     transform: translateY(-50%); } }
 .final-footer {
-  position: absolute;
   background-color: white;
   width: 100%;
   padding: 20px 0;
@@ -939,6 +938,14 @@ h1 .subtitle {
   margin: 0 20px 0 0;
   color: #9A9A9A;
   font-size: 14px; }
+.final-footer:after {
+  clear: both; }
+
+.perfect-scrollbar-on .final-footer {
+  position: absolute; }
+
+.perfect-scrollbar-off .final-footer {
+  padding: 40px 0; }
 
 @media (min-width: 1600px) {
   #chartPresentation {
@@ -2269,7 +2276,7 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
 .margin-top {
   margin-top: 50px; }
 
-.wrapper {
+.perfect-scrollbar-on .wrapper {
   position: relative;
   top: 0;
   height: 100vh; }
@@ -2407,7 +2414,9 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
 .hermes-wrapper {
   background: white; }
 .hermes-wrapper .navbar {
-  position: fixed; }
+  position: fixed;
+  z-index: 1000;
+  width: 100%; }
 .hermes-wrapper .navbar-toggler {
   position: absolute;
   right: 20px; }

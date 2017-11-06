@@ -2,6 +2,8 @@
 	background: white;
 	.navbar{
 		position: fixed;
+		z-index: 1000;
+		width: 100%;
 	}
 
 	.navbar-toggler{
@@ -19,7 +21,7 @@
 		color: $danger-color;
 	}
 
-	
+
 }
 
 .hermes-title{
@@ -176,7 +178,7 @@
 		.danger-notification{
 			width: 40%;
 			animation: first-animation 15s ease-in-out infinite;
-			
+
 		}
 
 		@keyframes first-animation{
@@ -185,7 +187,7 @@
 		        -webkit-transform: translate3d(0, 0, 0);
 			    transform: translate3d(0, 0, 0);
 			  }
-			  	
+
 			  50% {
 			  	-ms-transform: translate3d(15%, 0, 0);
 			  	-webkit-transform: translate3d(15%, 0, 0);
@@ -211,7 +213,7 @@
 			 	-webkit-transform: translate3d(-10%, 0, 0);
 			    transform: translate3d(-10%, 0, 0);
 			  }
-			  	
+
 			  50% {
 			  	-ms-transform: translate3d(10%, 0, 0);
 			  	-webkit-transform: translate3d(10%, 0, 0);
@@ -235,7 +237,7 @@
 			 	-webkit-transform: translate3d(20%, 0, 0);
 			    transform: translate3d(20%, 0, 0);
 			  }
-			  	
+
 			  50% {
 			  	-ms-transform: translate3d(8%, 0, 0);
 			  	-webkit-transform: translate3d(8%, 0, 0);
@@ -259,7 +261,7 @@
 			 	-webkit-transform: translate3d(50%, 0, 0);
 			    transform: translate3d(50%, 0, 0);
 			  }
-			  	
+
 			  50% {
 			  	-ms-transform: translate3d(35%, 0, 0);
 			    -webkit-transform: translate3d(35%, 0, 0);
@@ -283,7 +285,7 @@
 			    -webkit-transform: translate3d(40%, 0, 0);
 			    transform: translate3d(40%, 0, 0);
 			  }
-			  	
+
 			  50% {
 			    -ms-transform: translate3d(25%, 0, 0);
 			    -webkit-transform: translate3d(25%, 0, 0);
@@ -307,7 +309,7 @@
 			    -webkit-transform: translate3d(15%, 0, 0);
 			    transform: translate3d(15%, 0, 0);
 			  }
-			  	
+
 			  50% {
 			    -ms-transform: translate3d(30%, 0,0);
 			    -webkit-transform: translate3d(30%, 0,0);
@@ -354,7 +356,7 @@
 			-webkit-transform: rotate(-39deg);
 			transform: rotate(-39deg);
 		}
-	
+
 	.card-header{
 		p{
 			color: black;
@@ -398,7 +400,7 @@
 			    -webkit-transform: translate3d(0, 0%, 0);
 			    transform: translate3d(0, 0%, 0);
 			  }
-			  	
+
 			  50% {
 			    -ms-transform: translate3d(0, 15%, 0);
 			    -webkit-transform: translate3d(0, 15%, 0);
@@ -423,7 +425,7 @@
 			    -webkit-transform: translate3d(0, 0%, 0);
 			    transform: translate3d(0, 0%, 0);
 			  }
-			  	
+
 			  50% {
 			    -ms-transform: translate3d(0, -15%, 0);
 			    -webkit-transform: translate3d(0, -15%, 0);
@@ -439,7 +441,7 @@
 	span{
 		color: white;
 	}
-	
+
 }
 
 .gradientPage{
@@ -665,9 +667,9 @@
 		font-size: 35px;
 	}
 	.separator{
-		
+
 		color: black;
-	
+
 		&:after{
 			content: '';
 			width: 100px;

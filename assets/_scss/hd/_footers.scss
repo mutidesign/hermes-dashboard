@@ -1,5 +1,4 @@
 .final-footer{
-	position: absolute;
 	background-color: white;
 	width: 100%;
 	padding: 20px 0;
@@ -26,5 +25,19 @@
 		color: $grey-text-main-panel;
 		font-size: 14px;
 	}
-	
+	&:after{
+		clear: both;
+	}
+}
+
+.perfect-scrollbar-on{
+	.final-footer{
+		position: absolute;
+	}
+}
+
+.perfect-scrollbar-off{
+	.final-footer{
+		padding: 40px 0;
+	}
 }
