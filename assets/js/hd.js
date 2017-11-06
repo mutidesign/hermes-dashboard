@@ -1,4 +1,3 @@
-
 var navbar_initialized = false;
 
 var seq = 0, delays = 80, durations = 500;
@@ -19,21 +18,21 @@ $(document).ready(function(){
 	window_width = $(window).width();
 
 	hd.checkHeaderImage();
-	
+
 	if(window_width >= 992){
 		$(document).on('ps-scroll-x', function () {
 	  		hermesdashboard.checkScrollForParallax();
 		});
 	}
-	
+
 	if(window_width <= 991){
 		hd.initRightMenu();
 	}
 
-	 //      Activate the switches with icons 
+	 //      Activate the switches with icons
     if($('.switch').length != 0){
         $('.switch')['bootstrapSwitch']();
-    } 
+    }
 
 	$(document).on('ps-scroll-x', function () {
   		hermesdashboard.checkScrollForParallax();
@@ -51,7 +50,7 @@ $(document).ready(function(){
 	});
 
 	$('a[data-toggle=tab').on('shown.bs.tab', function (e) {
- 	 window.dispatchEvent(new Event('resize'));   
+ 	 window.dispatchEvent(new Event('resize'));
 	});
 });
 
@@ -66,7 +65,7 @@ $(window).resize(function(){
 hd = {
 
 	misc:{
-		navbar_menu_visible: 0 
+		navbar_menu_visible: 0
 	},
 
 	checkHeaderImage: function(){
@@ -191,7 +190,7 @@ hd = {
 
 
 }
- 
+
 var big_image;
 hermesdashboard = {
 	checkScrollForParallax: debounce(function(){
@@ -199,7 +198,7 @@ hermesdashboard = {
 		if($("html").hasClass("perfect-scrollbar-on")){
 			oVal = ($('.main-panel').scrollTop() / 3);
 		} else {
-			oVal = ($(window).scrollTop() / 3);	
+			oVal = ($(window).scrollTop() / 3);
 		}
 		big_image.css({
             'transform':'translate3d(0,' + oVal +'px,0)',
