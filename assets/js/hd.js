@@ -37,17 +37,7 @@ $(document).ready(function(){
 	$(document).on('ps-scroll-x', function () {
   		hermesdashboard.checkScrollForParallax();
 	});
-	var scroll_start = 0;
-	var startchange=$('.wave');
-	var offset = startchange.offset();
-	$(document).scroll(function(){
-		scroll_start = $(this).scrollTop();
-		if(scroll_start > offset.top){
-			$(".navbar").css('background-color', 'black');
-		} else {
-			$(".navbar").css('background-color', 'transparent');
-		}
-	});
+
 
 	$('a[data-toggle=tab').on('shown.bs.tab', function (e) {
  	 window.dispatchEvent(new Event('resize'));
