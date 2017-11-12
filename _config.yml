@@ -35,7 +35,7 @@ exclude:
   - sache.json
   - twbsconfig.yml
 
-plugins:
+plugins_dir:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-toc
