@@ -45,6 +45,18 @@
 		}
 	}
 
+	button:first-child,
+	a:first-child{
+		border-top-left-radius: $border-radius-extreme;
+		border-top-right-radius: $border-radius-extreme;
+	}
+
+	button:last-child,
+	a:last-child{
+		border-bottom-left-radius: $border-radius-extreme;
+		border-bottom-right-radius: $border-radius-extreme;
+	}
+
 }
 
 .menu-2{
