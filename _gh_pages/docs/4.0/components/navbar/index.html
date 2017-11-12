@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Documentation and examples for Bootstrap's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Jekyll v3.6.2">
+
+<title>Navbar · Bootstrap</title>
+
+<!-- Bootstrap core CSS -->
+
+<link href="/dist/css/bootstrap.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="/assets/css/docs.min.css" rel="stylesheet">
+
+<link href="/assets/css/hd.css" rel="stylesheet">
+
+<link href="/assets/css/hermes-icons.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:title" content="Navbar">
+<meta name="twitter:description" content="Documentation and examples for Bootstrap's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.">
+<meta name="twitter:image" content="http://localhost:9001/assets/brand/bootstrap-social-logo.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="http://localhost:9001/docs/4.0/components/navbar/">
+<meta property="og:title" content="Navbar">
+<meta property="og:description" content="Documentation and examples for Bootstrap's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="http://localhost:9001/assets/brand/bootstrap-social.png">
+<meta property="og:image:secure_url" content="http://localhost:9001/assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<!-- Documentation extras -->
+<style>
+    .navbar-absolute-logo{
+        padding-left: 45px;
+    }
+    .navbar-absolute-logo img{
+        position: absolute;
+        left: 15px;
+        margin-top: -6px;
+    }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'creative-tim.com');
+  ga('send', 'pageview');
+</script>
+
+  </head>
+  <body>
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+  <a class="navbar-brand mr-0 mr-md-2 navbar-absolute-logo" href="/" aria-label="Bootstrap">
+    <img src="/assets/img/tim-logo.png" alt="" width="40" height="40" data-toggle="tooltip" data-placement="bottom" title="Creative Tim"> Now UI Kit
+  </a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link " href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/4.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/docs/4.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://themes.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">Themes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank" rel="noopener">Blog</a>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown">
+      <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        v4.0
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item" href="https://v4-alpha.getbootstrap.com/">v4 Alpha 6</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/docs/3.3/">v3.3.7</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/></svg>
+
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener" aria-label="Twitter">
+        <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 416.32" focusable="false"><title>Twitter</title><path d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92" fill="currentColor"/></svg>
+
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://bootstrap-slack.herokuapp.com" target="_blank" rel="noopener" aria-label="Slack">
+        <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" focusable="false"><title>Slack</title><path fill="currentColor" d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z"/><path d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z" fill="currentColor"/></svg>
+
+      </a>
+    </li>
+  </ul>
+
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0-beta.2.zip">Download</a>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          
+<nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/docs/4.0/getting-started/introduction/">
+        Getting started
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.0/getting-started/introduction/">
+              Introduction
+            </a></li><li>
+            <a href="/docs/4.0/getting-started/license/">
+              License
+            </a></li><li>
+            <a href="/docs/4.0/getting-started/file-structure/">
+              File structure
+            </a></li></ul>
+    </div><div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/docs/4.0/components/alerts/">
+        Components
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.0/components/alerts/">
+              Alerts
+            </a></li><li>
+            <a href="/docs/4.0/components/buttons/">
+              Buttons
+            </a></li><li>
+            <a href="/docs/4.0/components/button-group/">
+              Button group
+            </a></li><li>
+            <a href="/docs/4.0/components/card/">
+              Card
+            </a></li><li>
+            <a href="/docs/4.0/components/dropdowns/">
+              Dropdowns
+            </a></li><li class="active bd-sidenav-active">
+            <a href="/docs/4.0/components/navbar/">
+              Navbar
+            </a></li><li>
+            <a href="/docs/4.0/components/typography/">
+              Typography
+            </a></li><li>
+            <a href="/docs/4.0/components/google-maps/">
+              Google Maps
+            </a></li></ul>
+    </div></nav>
+
+        </div>
+
+        
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#how-it-works">How it works</a></li>
+<li class="toc-entry toc-h2"><a href="#color-schemes">Color schemes</a></li>
+<li class="toc-entry toc-h2"><a href="#placement">Placement</a></li>
+<li class="toc-entry toc-h2"><a href="#responsive-behaviors">Responsive behaviors</a></li>
+</ul>
+          </div>
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <h1 class="bd-title" id="content">Navbar</h1>
+          <p class="bd-lead">Documentation and examples for Bootstrap's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.</p>
+          <h2 id="how-it-works">How it works</h2>
+
+<p>Here’s what you need to know before getting started with the navbar:</p>
+
+<ul>
+  <li>Navbars require a wrapping <code class="highlighter-rouge">.navbar</code> with <code class="highlighter-rouge">.navbar-expand{-sm|-md|-lg|-xl}</code> for responsive collapsing and <a href="#color-schemes">color scheme</a> classes.</li>
+  <li>Navbars and their contents are fluid by default. Use <a href="#containers">optional containers</a> to limit their horizontal width.</li>
+  <li>Use our <a href="/docs/4.0/utilities/spacing/">spacing</a> and <a href="/docs/4.0/utilities/flex/">flex</a> utility classes for controlling spacing and alignment within navbars.</li>
+  <li>Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our Collapse JavaScript plugin.</li>
+  <li>Navbars are hidden by default when printing. Force them to be printed by adding <code class="highlighter-rouge">.d-print</code> to the <code class="highlighter-rouge">.navbar</code>. See the <a href="/docs/4.0/utilities/display/">display</a> utility class.</li>
+  <li>Ensure accessibility by using a <code class="highlighter-rouge">&lt;nav&gt;</code> element or, if using a more generic element such as a <code class="highlighter-rouge">&lt;div&gt;</code>, add a <code class="highlighter-rouge">role="navigation"</code> to every navbar to explicitly identify it as a landmark region for users of assistive technologies.</li>
+</ul>
+
+<p>Read on for an example and list of supported sub-components.</p>
+
+<p>Here’s an example of all the sub-components included in a responsive light-themed navbar that automatically collapses at the <code class="highlighter-rouge">mg</code> (medium) breakpoint.</p>
+
+<div class="bd-example">
+<nav class="navbar navbar-expand-md" style="background:black;">
+   <button class="navbar-toggler d-sm-block d-lg-none" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-left">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-search"></i></div>
+          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search anything you want" />
+        </div>
+      </ul><!--navbar left-->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+            <div class="notification d-none d-lg-block d-xl-block"></div>
+            <i class="nc-icon nc-notification-70"></i>
+            <b class="caret d-none d-lg-block d-xl-block" style="margin-left:25px; margin-top: -15px;"></b>
+            <p class="d-lg-none">
+            New Notifications
+            <b class="caret"></b>
+          </p>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#" class="dropdown-item">Notification 1</a></li>
+            <li><a href="#" class="dropdown-item">Notification 2</a></li>
+            <li><a href="#" class="dropdown-item">Notification 3</a></li>
+            <li><a href="#" class="dropdown-item">Notification 4</a></li>
+            <li><a href="#" class="dropdown-item">Another Notification</a></li>
+          </ul>
+        </li>
+        <li class="separator d-lg-none"></li>
+      </ul><!--navbar right-->
+    </div>
+  </nav>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-md"</span> <span class="na">style=</span><span class="s">"background:black;"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"navbar-toggler d-sm-block d-lg-none"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span>  <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-label=</span><span class="s">"Toggle navigation"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-bars"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse navbar-collapse"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav navbar-nav navbar-left"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-addon"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-search"</span><span class="nt">&gt;&lt;/i&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inlineFormInputGroup"</span> <span class="na">placeholder=</span><span class="s">"Search anything you want"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span><span class="c">&lt;!--navbar left--&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-nav ml-auto"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-link dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"notification d-none d-lg-block d-xl-block"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"nc-icon nc-notification-70"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"caret d-none d-lg-block d-xl-block"</span> <span class="na">style=</span><span class="s">"margin-left:25px; margin-top: -15px;"</span><span class="nt">&gt;&lt;/b&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"d-lg-none"</span><span class="nt">&gt;</span>
+            New Notifications
+            <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/b&gt;</span>
+          <span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span>  <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>Notification 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>Notification 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>Notification 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>Notification 4<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>Another Notification<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator d-lg-none"</span><span class="nt">&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span><span class="c">&lt;!--navbar right--&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span></code></pre></div>
+
+<h2 id="color-schemes">Color schemes</h2>
+
+<p>Theming the navbar has never been easier thanks to the combination of theming classes and <code class="highlighter-rouge">background-color</code> utilities. Choose from <code class="highlighter-rouge">.navbar-light</code> for use with light background colors, or <code class="highlighter-rouge">.navbar-dark</code> for dark background colors. Then, customize with <code class="highlighter-rouge">.bg-*</code> utilities.</p>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+   <button class="navbar-toggler d-sm-block d-lg-none" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-left">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-search"></i></div>
+          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search anything you want" />
+        </div>
+      </ul><!--navbar left-->
+      <ul class="navbar-nav ml-auto">
+         <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nc-icon nc-map-big"></i>
+            <p class="d-lg-none">Contacts</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nc-icon nc-bell-55"></i>
+            <p class="d-lg-none">Messages</p>
+          </a>
+        </li>
+        <li class="separator d-lg-none"></li>
+      </ul><!--navbar right-->
+    </div>
+  </nav>
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+   <button class="navbar-toggler d-sm-block d-lg-none" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-left">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-search"></i></div>
+          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search anything you want" />
+        </div>
+      </ul><!--navbar left-->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nc-icon nc-map-big"></i>
+            <p class="d-lg-none">Contacts</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nc-icon nc-bell-55"></i>
+            <p class="d-lg-none">Messages</p>
+          </a>
+        </li>
+        <li class="separator d-lg-none"></li>
+      </ul><!--navbar right-->
+    </div>
+  </nav>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-dark bg-dark"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- Navbar content --&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+
+<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-dark bg-primary"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- Navbar content --&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<h2 id="placement">Placement</h2>
+
+<p>Use our <a href="/docs/4.0/utilities/position/">position utilities</a> to place navbars in non-static positions. Choose from fixed to the top, fixed to the bottom, or stickied to the top (scrolls with the page until it reaches the top, then stays there). Fixed navbars use <code class="highlighter-rouge">position: fixed</code>, meaning they’re pulled from the normal flow of the DOM and may require custom CSS (e.g., <code class="highlighter-rouge">padding-top</code> on the <code class="highlighter-rouge">&lt;body&gt;</code>) to prevent overlap with other elements.</p>
+
+<p>Also note that <strong><code class="highlighter-rouge">.sticky-top</code> uses <code class="highlighter-rouge">position: sticky</code>, which <a href="https://caniuse.com/#feat=css-sticky">isn’t fully supported in every browser</a></strong>.</p>
+
+<div class="bd-example">
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">Default</a>
+</nav>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-light bg-light"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></div>
+
+<div class="bd-example">
+<nav class="navbar fixed-top navbar-light bg-light">
+  <a class="navbar-brand" href="#">Fixed top</a>
+</nav>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar fixed-top navbar-light bg-light"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Fixed top<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></div>
+
+<div class="bd-example">
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <a class="navbar-brand" href="#">Fixed bottom</a>
+</nav>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar fixed-bottom navbar-light bg-light"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Fixed bottom<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></div>
+
+<div class="bd-example">
+<nav class="navbar sticky-top navbar-light bg-light">
+  <a class="navbar-brand" href="#">Sticky top</a>
+</nav>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar sticky-top navbar-light bg-light"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Sticky top<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></div>
+
+<h2 id="responsive-behaviors">Responsive behaviors</h2>
+
+<p>Navbars can utilize <code class="highlighter-rouge">.navbar-toggler</code>, <code class="highlighter-rouge">.navbar-collapse</code>, and <code class="highlighter-rouge">.navbar-expand{-sm|-md|-lg|-xl}</code> classes to change when their content collapses behind a button. In combination with other utilities, you can easily choose when to show or hide particular elements.</p>
+
+<p>For navbars that never collapse, add the <code class="highlighter-rouge">.navbar-expand</code> class on the navbar. For navbars that always collapse, don’t add any <code class="highlighter-rouge">.navbar-expand</code> class.</p>
+
+
+        </main>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+
+<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/bootstrap.js"></script><script src="/assets/js/vendor/anchor.min.js"></script>
+  <script src="/assets/js/vendor/clipboard.min.js"></script>
+  <script src="/assets/js/vendor/holder.min.js"></script>
+  <script src="/assets/js/src/application.js"></script>
+  <script src="/assets/js/src/pwa.js"></script><script src="/assets/js/ie-emulation-modes-warning.js"></script>
+
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+
+  </body>
+</html>

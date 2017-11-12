@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% include path/path-assets.html %}
+    {% include head.html %}
+</head>
+
+<body>
+    <div class="hermes-wrapper">
+        <div class="sidebar d-lg-none">
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="#">Hermes</a>
+                </div>
+                <ul class="nav">
+                </ul>
+            </div>
+        </div>
+		<nav class="navbar navbar-expand-md">
+		    <div class="container">
+		        <button class="navbar-toggler d-sm-block d-lg-none" type="button" data-toggle="collapse"  aria-expanded="false" aria-label="Toggle navigation">
+		            <i class="fa fa-bars"></i>
+		        </button>
+		        <div class="collapse navbar-collapse">
+		            <ul class="nav navbar-nav navbar-left">
+		                <li class="nav-item">
+		                    <a href="dashboard.html" class="hermes-title nav-link d-none d-lg-block">hermes</a>
+		                </li>
+		            </ul><!--navbar left-->
+
+		            <ul class="navbar-nav ml-auto social-icons">
+		                <li class="nav-item text-center">
+		                    <button class="btn btn-warning btn-round">Download Now</button>
+		            	</li>
+		                <li class="nav-item">
+		                    <a href="#" class="nav-link" >
+		                        <i class="fa fa-facebook-square"></i>
+		                        <p class="d-lg-none facebook-logo">facebook</p>
+		                    </a>
+		                </li>
+
+		                <li class="nav-item">
+		                    <a href="#" class="nav-link">
+		                        <i class="fa fa-twitter"></i>
+		                        <p class="d-lg-none twitter-logo">twitter</p>
+		                    </a>
+		                </li>
+
+		                <li class="nav-item">
+		                    <a href="#" class="nav-link" >
+		                        <i class="fa fa-dribbble"></i>
+		                        <p class="d-lg-none dribbble-logo">dribbble</p>
+		                    </a>
+		                </li>
+		            </ul><!--navbar right-->
+		        </div>
+		    </div>
+		</nav>
+
+        {{ content }}
+
+    </div>
+
+
+
+
+</body>
+
+    {% include js/script.html %}
+
+</html>
