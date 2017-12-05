@@ -41,27 +41,28 @@ plugins:
   - jekyll-toc
 
 # Social
-title:              Bootstrap
-description:        "The most popular HTML, CSS, and JS library in the world."
-twitter:            getbootstrap
-authors:            "Mark Otto, Jacob Thornton, and Bootstrap contributors"
+title:              Hermes Dashboard
+description:        "Free Bootstrap 4 Admin Dashboard Template"
+twitter:            mutidesign
+authors:            "Muti Design Team"
 social_image_path:  /assets/brand/bootstrap-social.png
 social_logo_path:   /assets/brand/bootstrap-social-logo.png
 
 # Custom variables
-current_version:      4.0.0-beta.2
-current_ruby_version: 4.0.0.beta2
-docs_version:         4.0
-repo:                 "https://github.com/twbs/bootstrap"
+current_version:      1.0.0
+current_ruby_version: 1.0.0
+docs_version:         1.0
+repo:                 "https://github.com/mutidesign/hermes-dashboard"
 slack:                "https://bootstrap-slack.herokuapp.com"
 blog:                 "https://blog.getbootstrap.com"
 expo:                 "https://expo.getbootstrap.com"
 jobs:                 "https://jobs.getbootstrap.com"
 themes:               "https://themes.getbootstrap.com"
+live_preview:         "http://demos.mutidesign.com/hermes-dashboard/"
 
 download:
-  source:           "https://github.com/twbs/bootstrap/archive/v4.0.0-beta.2.zip"
-  dist:             "https://github.com/twbs/bootstrap/releases/download/v4.0.0-beta.2/bootstrap-4.0.0-beta.2-dist.zip"
+  source:           "https://github.com/mutidesign/hermes-dashboard/archive/master.zip"
+  dist:             "https://github.com/mutidesign/hermes-dashboard/archive/master.zip"
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes

@@ -1,32 +1,12 @@
 <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
   <a class="navbar-brand mr-0 mr-md-2 navbar-absolute-logo" href="{{ site.baseurl }}/" aria-label="Bootstrap">
-    <img src="/assets/img/tim-logo.png" alt="" width="40" height="40" data-toggle="tooltip" data-placement="bottom" title="Creative Tim"> Now UI Kit
+    <img src="/assets/img/tim-logo.png" alt="" width="40" height="40" data-toggle="tooltip" data-placement="bottom" title="Creative Tim"> Hermes Dashboard
   </a>
 
-  <div class="navbar-nav-scroll">
-    <ul class="navbar-nav bd-navbar-nav flex-row">
-      <li class="nav-item">
-        <a class="nav-link {% if page.layout == "home" %}active{% endif %}" href="{{ site.baseurl }}/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link {% if page.title == "Examples" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ site.themes }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">Themes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ site.blog }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank" rel="noopener">Blog</a>
-      </li>
-    </ul>
-  </div>
-
-  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+  <ul class="navbar-nav flex-row d-none d-md-flex">
     <li class="nav-item dropdown">
       <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        v4.0
+        v1.0.0
       </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
         <a class="dropdown-item active" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/">Latest (4.x)</a>
@@ -46,12 +26,23 @@
         {% include icons/twitter.svg class="navbar-nav-svg" %}
       </a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link p-2" href="{{ site.slack }}" target="_blank" rel="noopener" aria-label="Slack">
-        {% include icons/slack.svg class="navbar-nav-svg" %}
-      </a>
-    </li>
   </ul>
+  
+  <div class="navbar-nav-scroll ml-md-auto ">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/">Documentation</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{{ site.live_preview }}/examples/dashboard.html"> Live Preview</a>
+        </li>
+              
+      <li class="nav-item">
+        <a class="nav-link" href="{{ site.repo }}/issues" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">Report Issue</a>
+      </li>
+    </ul>
+  </div>
 
-  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="{{ site.download.source }}">Download</a>
+  <a class="btn btn-neutral d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="{{ site.download.source }}">Download</a>
 </header>
