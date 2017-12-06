@@ -1,14 +1,14 @@
 // Gulp.js configuration
 'use strict';
 
-const productname = 'hermes-dashboard',
-      version = 'v1.0.0';
+const productname = 'material-dashboard-pro',
+      version = 'v1.2.0';
 
 const
 
   // source and build folders
   dir = {
-    src         : './',
+    src         : '_site/',
     build       : 'dist/'
   },
 
@@ -26,7 +26,7 @@ const
   prettify      = require('gulp-jsbeautifier'),
   clean         = require('gulp-clean'),
   git           = require('gulp-git'), // https://www.npmjs.com/package/gulp-git
-  ghPages       = require('gulp-gh-pages'),
+  replace       = require('gulp-replace'),
   zip           = require('gulp-zip');
 ;
 
@@ -35,7 +35,7 @@ var browsersync = false;
 
 // Move HTML settings
 const move_html = {
-  src           : dir.src + 'examples/**/*.html',
+  src           : dir.src + '**/*.html',
   build         : dir.build
 };
 
@@ -59,18 +59,33 @@ gulp.task('move_sass', () => {
     .pipe(gulp.dest(move_sass.build));
 });
 
-// Move SASS folder
-const move_docs = {
-    src          : 'docs/**/*',
-    build        : dir.build + 'docs/',
+// Move MD file
+const move_md = {
+    src          : dir.src + '**/*.md',
+    build        : dir.build,
 }
 
-// copy Sass files
-gulp.task('move_docs', () => {
-  return gulp.src(move_docs.src)
-    .pipe(newer(move_docs.build))
-    .pipe(gulp.dest(move_docs.build));
+// copy MD file
+gulp.task('move_md', () => {
+  return gulp.src(move_md.src)
+    .pipe(newer(move_md.build))
+    .pipe(gulp.dest(move_md.build));
 });
+
+
+// Move cssdoc file
+const move_cssdoc = {
+    src          : dir.src,
+    build        : dir.build + 'documentation/css',
+}
+
+// copy CSS DOCUMENTATION file
+gulp.task('move_cssdoc', () => {
+  return gulp.src('documentation/css/*.css')
+    .pipe(newer(move_cssdoc.build))
+    .pipe(gulp.dest(move_cssdoc.build));
+});
+
 
 // copy SASS parent
 gulp.task('move_sass_parent', () => {
@@ -86,22 +101,44 @@ gulp.task('move_js', () => {
     .pipe(gulp.dest(dir.build + '/assets/js/'));
 });
 
+// copy min js assets
+gulp.task('move_min_js', () => {
+  return gulp.src('assets/js/**/*.min.js')
+    .pipe(newer(dir.build + '/assets/js/'))
+    .pipe(gulp.dest(dir.build + '/assets/js/'));
+});
+
+
+// copy min css assets
+gulp.task('move_min_css', () => {
+  return gulp.src('assets/css/**/*.min.css')
+    .pipe(newer(dir.build + '/assets/css/'))
+    .pipe(gulp.dest(dir.build + '/assets/css/'));
+});
+
 gulp.task('move_css', () => {
-  return gulp.src('./assets/css/**/*')
+  return gulp.src('_site/assets/css/**/*')
     .pipe(newer(dir.build + '/assets/css/'))
     .pipe(gulp.dest(dir.build + '/assets/css/'));
 });
 
 
 gulp.task('move_fonts', () => {
-  return gulp.src('./assets/fonts/**/*')
+  return gulp.src('_site/assets/fonts/**/*')
     .pipe(newer(dir.build + '/assets/fonts/'))
     .pipe(gulp.dest(dir.build + '/assets/fonts/'));
 });
 
 
+gulp.task('move_images', () => {
+  return gulp.src('_site/assets/img/**/*')
+    .pipe(newer(dir.build + '/assets/img/'))
+    .pipe(gulp.dest(dir.build + '/assets/img/'));
+});
+
+
 gulp.task('clean_scss', function () {
-    return gulp.src(dir.build + '/assets/css/now-ui-dashboard.scss', {read: false})
+    return gulp.src(dir.build + '/assets/css/material-dashboard.scss', {read: false})
         .pipe(clean());
 });
 
@@ -115,8 +152,15 @@ const images = {
 gulp.task('images', () => {
   return gulp.src(images.src)
     .pipe(newer(images.build))
-    .pipe(imagemin({ optimizationLevel: 8 }))
+    .pipe(imagemin({ optimizationLevel: 10 }))
     .pipe(gulp.dest(images.build));
+});
+
+gulp.task( "remove-lines-from-scss", function ( ) {
+    gulp.src( "assets/css/*.scss" )
+        .pipe( replace(
+            "---\n# Front matter comment to ensure Jekyll properly reads file.\n---","") )
+        .pipe( gulp.dest( "dist/assets/sass/" ) );
 });
 
 // CSS settings
@@ -145,13 +189,13 @@ var css = {
 };
 
 // CSS processing
-gulp.task('css', ['images'], () => {
-  return gulp.src(css.src)
-    .pipe(sass(css.sassOpts))
-    .pipe(postcss(css.processors))
-    .pipe(gulp.dest(css.build))
-    .pipe(browsersync ? browsersync.reload({ stream: true }) : gutil.noop());
-});
+// gulp.task('css', ['images'], () => {
+//   return gulp.src(css.src)
+//     .pipe(sass(css.sassOpts))
+//     .pipe(postcss(css.processors))
+//     .pipe(gulp.dest(css.build))
+//     .pipe(browsersync ? browsersync.reload({ stream: true }) : gutil.noop());
+// });
 
 // Zip files up
 gulp.task('zip', function () {
@@ -166,9 +210,10 @@ gulp.task('zip', function () {
 //     .pipe(gulp.dest('dist/'))
 // });
 
+//  'dist/assets/sass/*.css'
 
 gulp.task('prettify-html', function() {
-  gulp.src(['./examples/**/*.html'])
+  gulp.src(['_site/**/*.html'])
     .pipe(prettify({
         "html": {
             "allowed_file_extensions": ["htm", "html", "xhtml", "shtml", "xml", "svg"],
@@ -185,11 +230,11 @@ gulp.task('prettify-html', function() {
             "wrap_line_length": 0 // Lines should wrap at next opportunity after this number of characters (0 disables)
         }
     }))
-    .pipe(gulp.dest('dist/examples/'));
+    .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('prettify-css', function() {
-  gulp.src(['./assets/css/**/*.css'])
+  gulp.src(['_site/assets/css/**/*.css','!_site/assets/css/**/*.min.css'])
     .pipe(prettify({
         "css": {
             "allowed_file_extensions": ["css", "scss", "sass", "less"],
@@ -205,7 +250,7 @@ gulp.task('prettify-css', function() {
 });
 
 gulp.task('prettify-js', function() {
-  gulp.src(['./assets/js/**/*.js'])
+  gulp.src(['_site/assets/js/**/*.js','!_site/assets/js/**/*.min.js'])
     .pipe(prettify({
         "js": {
             "allowed_file_extensions": ["js", "json", "jshintrc", "jsbeautifyrc"],
@@ -233,17 +278,90 @@ gulp.task('prettify-js', function() {
     .pipe(gulp.dest('dist/assets/js'));
 });
 
-gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
-    .pipe(ghPages());
+
+// compiles less files and outputs them to css
+// gulp.task('compile-less', function() {
+//     return gulp.src(path.join(cssPath, '*.less'))
+//         .pipe(less())
+//         .pipe(gulp.dest(cssPath));
+// });
+
+// Builds the static website with Jekyll
+// gulp.task('jekyll', ['compile-less'], function(done) {
+//     execute('jekyll build --future --destination '
+//         + path.join('..', websiteOutputDirectory), {
+//         cwd: websiteInputDirectory
+//     }, done);
+// });
+//
+// function execute (cmd, opts, done) {
+//     util.log(util.colors.cyan(cmd));
+//     exec(cmd, opts,
+//         function (error, stdout, stderr) {
+//             util.log(util.colors.cyan(stdout));
+//             util.log(util.colors.red(stderr));
+//             done(error);
+//         }
+//     );
+// }
+
+// // Validates html and links
+// gulp.task('html-proofer', function(done) {
+//     execute('htmlproof ' +
+//         buildOutputDirectory +
+//         // html-proofer options
+//     , done());
+// });
+//
+// function execute (cmd, opts, done) {
+//     util.log(util.colors.cyan(cmd));
+//     exec(cmd, opts,
+//         function (error, stdout, stderr) {
+//             util.log(util.colors.cyan(stdout));
+//             util.log(util.colors.red(stderr));
+//             done(error);
+//         }
+//     );
+// }
+
+gulp.task('lint-css', function lintCssTask() {
+  const gulpStylelint = require('gulp-stylelint');
+
+  return gulp
+    .src('assets/_scss/**/*.scss')
+    .pipe(gulpStylelint({
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }));
+});
+
+
+// Move HTML settings
+const live_demo = {
+  src           : '/dist/**/*',
+  build         : '../ct-freebies/public/' + productname + '/'
+};
+
+gulp.task('move_live_demo', () => {
+  return gulp.src(live_demo.src)
+    .pipe(newer(live_demo.build))
+    .pipe(gulp.dest(live_demo.build));
+});
+
+gulp.task('travis',['move_html'], () => {
+    gutil.log('Finished build');
+    process.exit(0);
 });
 
 gulp.task('prettify',['prettify-html','prettify-css','prettify-js'], () => {
     gutil.log('Finished prettify');
 });
 
+
 // run all tasks
-gulp.task('build', ['prettify', 'move_docs','move_css','move_js','move_sass_parent','move_sass', 'images', 'move_fonts']);
+gulp.task('build', ['prettify', 'move_md', 'move_sass', 'move_cssdoc', 'move_images', 'move_min_js', 'move_min_css', 'move_fonts','clean_scss','move_sass_parent','remove-lines-from-scss']);
+
 
 // run all tasks
 // gulp.task('live_demo', ['move_html', 'move_css','move_js','move_sass_parent','move_sass', 'images', 'move_fonts','clean_scss']);

@@ -1,0 +1,80 @@
+<!-- Core JS Files -->
+	<script src="../assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="../assets/js/core/jquery-ui.min.js"></script>
+	<script src="../assets/js/core/popper.min.js"></script>
+	<script src="../assets/js/core/bootstrap.min.js"></script>
+
+	<!--  Checkbox, Radio & Switch Plugins  -->
+	<script src="../assets/js/plugins/bootstrap-checkbox-radio-switch.js"></script>
+
+	<!-- Sharrre plugin -->
+	<script src="../assets/js/plugins/jquery.sharrre.min.js"></script>
+
+	<!-- Plugin for Charts, full documentation here: https://gionkunz.github.io/chartist-js/ -->
+	<script src="../assets/js/plugins/chartist.min.js"></script>
+
+	<!-- Plugin for Notifications, full documentation here: http://bootstrap-notify.remabledesigns.com/ -->
+    <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin  -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL-h9gM-Ylf6eDPlVUH_bR5fHQhOE-7Q0"></script>
+
+	<!-- Hermes Dashboard javascript methods -->
+	<script src="../assets/js/hd.js"></script>
+
+	<!-- Hermes Dashboard DEMO methods, don't include it in your project! -->
+	<script src="../assets/js/demo.js"></script>
+
+	<script>
+
+	$(document).ready(function(){
+
+		{% if page.brand == "Dashboard" %}
+
+			demo.initChartist()
+
+		{% elsif page.brand == "Maps" %}
+
+			demo.initGoogleMaps();
+
+		{% endif %}
+
+		{% if page.brand != "presentation" %}
+
+		window_width = $(window).width();
+
+			if(window_width >= 992){
+				big_image = $('.main-panel > .page-header');
+				$(window).on('scroll', hermesdashboard.checkScrollForParallax);
+			}
+
+		{% elsif page.brand == "presentation" %}
+
+			demo.presentationChartist();
+
+			$("html").removeClass("perfect-scrollbar-on");
+			window_width = $(window).width();
+
+			if(window_width >= 992){
+				big_image = $('.productPage > .image');
+
+				$(window).on('scroll', hermesdashboard.checkScrollForParallax);
+
+			}
+
+			var scroll_start = 0;
+			var startchange=$('.wave');
+			var offset = startchange.offset();
+			$(document).scroll(function(){
+				scroll_start = $(this).scrollTop();
+				if(scroll_start > offset.top){
+					$(".navbar").css('background-color', 'black');
+				} else {
+					$(".navbar").css('background-color', 'transparent');
+				}
+			});
+
+		{% endif %}
+	});
+
+	</script>
