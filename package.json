@@ -12,7 +12,7 @@
     "css-compile-docs": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 docs/assets/scss/docs.scss assets/css/docs.min.css",
 
     "css-lint": "stylelint --config build/.stylelintrc --syntax scss \"assets/scss/*.scss\" && stylelint --config build/.stylelintrc \"assets/**/*.css\"",
-    "css-lint-docs": "stylelint --config build/.stylelintrc --syntax scss \"docs/assets/scss/*.scss\" && stylelint --config docs/4.0/examples/.stylelintrc \"docs/**/*.css\"",
+    "css-lint-docs": "stylelint --config build/.stylelintrc --syntax scss \"docs/assets/scss/*.scss\" && stylelint --config docs/1.0/examples/.stylelintrc \"docs/**/*.css\"",
 
     "css-prefix": "postcss --config build/postcss.config.js --replace \"assets/css/hd.min.css\"",
     "css-prefix-docs": "postcss --config build/postcss.config.js --replace \"assets/css/docs.min.css\" \"docs/**/*.css\"",
@@ -38,7 +38,10 @@
     "release-version": "node build/change-version.js",
     "release-zip": "cd dist/ && zip -r9 bootstrap-$npm_package_version-dist.zip * && shx mv bootstrap-$npm_package_version-dist.zip ..",
 
-    "watch-css": "nodemon -e scss -x \"npm run css\""
+    "watch-css": "nodemon -e scss -x \"npm run css\"",
+    "watch-css-docs": "nodemon -e scss -x \"npm run css-docs\"",
+
+    "dev": "npm run watch-css | npm run watch-css-docs"
   },
   "style": "dist/css/bootstrap.css",
   "sass": "scss/bootstrap.scss",

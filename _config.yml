@@ -13,13 +13,15 @@ source:         "."
 destination:    ./_gh_pages
 port:           9001
 baseurl:        ""
-url:            "https://getbootstrap.com"
+url:            "https://www.mutidesign.com"
 encoding:       UTF-8
 exclude:
   - .git/
   - .github/
   - assets/scss/
+  - bootstrap-scss/
   - build/
+  - dist/
   - js/
   - node_modules/
   - nuget/
@@ -53,11 +55,6 @@ current_version:      1.0.0
 current_ruby_version: 1.0.0
 docs_version:         1.0
 repo:                 "https://github.com/mutidesign/hermes-dashboard"
-slack:                "https://bootstrap-slack.herokuapp.com"
-blog:                 "https://blog.getbootstrap.com"
-expo:                 "https://expo.getbootstrap.com"
-jobs:                 "https://jobs.getbootstrap.com"
-themes:               "https://themes.getbootstrap.com"
 live_preview:         "http://demos.mutidesign.com/hermes-dashboard/"
 
 download:
