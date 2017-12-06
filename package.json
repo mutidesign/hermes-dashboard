@@ -41,7 +41,10 @@
     "watch-css": "nodemon -e scss -x \"npm run css\"",
     "watch-css-docs": "nodemon -e scss -x \"npm run css-docs\"",
 
-    "dev": "npm run watch-css | npm run watch-css-docs"
+    "dev": "npm run watch-css | npm run watch-css-docs",
+    
+    "jekyll-dev": "JEKYLL_ENV=development bundle exec jekyll serve",
+    "jekyll-build": "JEKYLL_ENV=production bundle exec jekyll build"
   },
   "style": "dist/css/bootstrap.css",
   "sass": "scss/bootstrap.scss",
