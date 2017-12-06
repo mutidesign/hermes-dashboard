@@ -76,6 +76,9 @@
 <loc>http://localhost:9001/</loc>
 </url>
 <url>
+<loc>http://localhost:9001/docs/</loc>
+</url>
+<url>
 <loc>http://localhost:9001/docs/1.0/extend/</loc>
 </url>
 <url>
