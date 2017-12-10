@@ -1,0 +1,76 @@
+# Dependencies
+markdown:       kramdown
+highlighter:    rouge
+
+kramdown:
+  auto_ids:     true
+
+# Permalinks
+#permalink:      pretty
+
+# Server
+source:         "."
+destination:    ./_site
+port:           9001
+baseurl:        ""
+url:            "https://www.mutidesign.com"
+encoding:       UTF-8
+exclude:
+  - .git/
+  - .github/
+  - assets/scss/
+  - bootstrap-scss/
+  - build/
+  - dist/
+  - js/
+  - node_modules/
+  - nuget/
+  - scss/
+  - vendor/
+  - bower.json
+  - composer.json
+  - Gemfile
+  - Gemfile.lock
+  - package.js
+  - package.json
+  - package-lock.json
+  - sache.json
+  - twbsconfig.yml
+  - gulpfile.js
+  - Gruntfile.js
+  - sw.js
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-toc
+
+# Social
+title:              Hermes Dashboard
+description:        "Free Bootstrap 4 Admin Dashboard Template"
+twitter:            mutidesign
+authors:            "Muti Design Team"
+social_image_path:  /assets/brand/bootstrap-social.png
+social_logo_path:   /assets/brand/bootstrap-social-logo.png
+
+# Custom variables
+current_version:      1.0.0
+current_ruby_version: 1.0.0
+docs_version:         1.0
+repo:                 "https://github.com/mutidesign/hermes-dashboard"
+live_preview:         "http://demos.mutidesign.com/hermes-dashboard/"
+
+download:
+  source:           "https://github.com/mutidesign/hermes-dashboard/archive/master.zip"
+  dist:             "https://github.com/mutidesign/hermes-dashboard/archive/master.zip"
+
+cdn:
+  # See https://www.srihash.org for info on how to generate the hashes
+  css:              "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+  css_hash:         "sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+  js:               "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+  js_hash:          "sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+  jquery:           "https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  jquery_hash:      "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  popper:           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"
+  popper_hash:      "sha384-W1IgCZfiFCplncoIxD5rld+uzdB6FlcG2vm4qjrCP5Z7uUt7vnwbztJXeqXgd26w"

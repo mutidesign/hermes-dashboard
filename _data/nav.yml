@@ -1,0 +1,16 @@
+- title: Getting started
+  pages:
+    - title: Introduction
+    - title: License
+    - title: File structure
+
+- title: Components
+  pages:
+    - title: Alerts
+    - title: Buttons
+    - title: Button group
+    - title: Card
+    - title: Dropdowns
+    - title: Navbar
+    - title: Typography
+    - title: Google Maps
