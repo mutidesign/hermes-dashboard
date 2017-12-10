@@ -4,31 +4,22 @@
   "version": "1.0.0",
   "scripts": {
     "bash": "bash",
-
     "css": "npm-run-all --parallel css-compile --sequential css-minify",
     "css-docs": "npm-run-all --parallel css-lint-docs css-compile-docs --sequential css-prefix-docs css-minify-docs",
-
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 assets/scss/hd.scss assets/css/hd.min.css",
     "css-compile-docs": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 docs/assets/scss/docs.scss assets/css/docs.min.css",
-
     "css-lint": "stylelint --config build/.stylelintrc --syntax scss \"assets/scss/*.scss\" && stylelint --config build/.stylelintrc \"assets/**/*.css\"",
     "css-lint-docs": "stylelint --config build/.stylelintrc --syntax scss \"docs/assets/scss/*.scss\" && stylelint --config docs/1.0/examples/.stylelintrc \"docs/**/*.css\"",
-
     "css-prefix": "postcss --config build/postcss.config.js --replace \"assets/css/hd.min.css\"",
     "css-prefix-docs": "postcss --config build/postcss.config.js --replace \"assets/css/docs.min.css\" \"docs/**/*.css\"",
-
     "css-minify": "cleancss --level 1 --output assets/css/hd.min.css assets/css/hd.min.css",
     "css-minify-docs": "cleancss --level 1 --source-map --source-map-inline-sources --output assets/css/docs.min.css assets/css/docs.min.css",
-
     "js-docs": "npm-run-all js-lint-docs js-minify-docs",
     "js-lint-docs": "eslint --config js/tests/.eslintrc.json assets/js/ docs/",
     "js-minify-docs": "uglifyjs --mangle --comments \"/^!/\" --output assets/js/docs.min.js assets/js/vendor/anchor.min.js assets/js/vendor/clipboard.min.js assets/js/vendor/holder.min.js assets/js/src/application.js assets/js/src/pwa.js",
-
     "docs": "npm-run-all --parallel css-docs js-docs --sequential docs-compile",
     "docs-compile": "bundle exec jekyll build",
-
     "build": "npm-run-all --parallel css-docs js-docs --sequential docs-compile",
-
     "postdocs-compile": "npm run docs-workbox-precache",
     "docs-github": "shx echo \"github: true\" > twbsconfig.yml && npm run docs-compile -- --config _config.yml,twbsconfig.yml && shx rm ./twbsconfig.yml",
     "docs-serve": "bundle exec jekyll serve",
@@ -37,12 +28,9 @@
     "maintenance-dependencies": "ncu -a -x jquery && npm update && bundle update && shx echo 'Manually update assets/js/vendor/*, js/tests/vendor/* and .travis.yml'",
     "release-version": "node build/change-version.js",
     "release-zip": "cd dist/ && zip -r9 bootstrap-$npm_package_version-dist.zip * && shx mv bootstrap-$npm_package_version-dist.zip ..",
-
     "watch-css": "nodemon -e scss -x \"npm run css\"",
     "watch-css-docs": "nodemon -e scss -x \"npm run css-docs\"",
-
     "dev": "npm run watch-css | npm run watch-css-docs",
-    
     "jekyll-dev": "JEKYLL_ENV=development bundle exec jekyll serve",
     "jekyll-build": "JEKYLL_ENV=production bundle exec jekyll build"
   },
@@ -57,7 +45,9 @@
     "url": "https://github.com/twbs/bootstrap/issues"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-remove-lines": "^0.1.0"
+  },
   "peerDependencies": {
     "jquery": "1.9.1 - 3",
     "popper.js": "^1.12.6"

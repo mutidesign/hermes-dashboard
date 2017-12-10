@@ -1,8 +1,8 @@
 // Gulp.js configuration
 'use strict';
 
-const productname = 'material-dashboard-pro',
-      version = 'v1.2.0';
+const productname = 'light-bootstrap-dashboard-pro',
+      version = 'v2.0.0';
 
 const
 
@@ -26,6 +26,7 @@ const
   prettify      = require('gulp-jsbeautifier'),
   clean         = require('gulp-clean'),
   git           = require('gulp-git'), // https://www.npmjs.com/package/gulp-git
+  removeLines   = require('gulp-remove-lines'),
   replace       = require('gulp-replace'),
   zip           = require('gulp-zip');
 ;
@@ -39,6 +40,11 @@ const move_html = {
   build         : dir.build
 };
 
+const move_bootstrap3 = {
+  src           : '/BS3/**/*',
+  build         : '/dist/BS3/'
+};
+
 // copy HTML files
 gulp.task('move_html', () => {
   return gulp.src(move_html.src)
@@ -46,32 +52,32 @@ gulp.task('move_html', () => {
     .pipe(gulp.dest(move_html.build));
 });
 
-// Move SASS folder
-const move_sass = {
-    src          : 'assets/_scss/**/*.scss',
-    build        : dir.build + 'assets/sass/',
-}
-
-// copy Sass files
-gulp.task('move_sass', () => {
-  return gulp.src(move_sass.src)
-    .pipe(newer(move_sass.build))
-    .pipe(gulp.dest(move_sass.build));
+// copy HTML files
+gulp.task('move_bootstrap3_html', () => {
+  return gulp.src(['BS3/**/*']).pipe(gulp.dest('dist/BS3'));;
 });
 
-// Move MD file
-const move_md = {
-    src          : dir.src + '**/*.md',
-    build        : dir.build,
-}
 
-// copy MD file
+
+
+// Move MD settings
+const move_md = {
+  src           : dir.src + '**/*.md',
+  build         : dir.build
+};
+
+// copy MD files
 gulp.task('move_md', () => {
   return gulp.src(move_md.src)
     .pipe(newer(move_md.build))
     .pipe(gulp.dest(move_md.build));
 });
 
+// Move SASS folder
+const move_sass = {
+    src          : 'assets/_scss/**/*.scss',
+    build        : dir.build + 'assets/sass/',
+}
 
 // Move cssdoc file
 const move_cssdoc = {
@@ -87,6 +93,13 @@ gulp.task('move_cssdoc', () => {
 });
 
 
+// copy Sass files
+gulp.task('move_sass', () => {
+  return gulp.src(move_sass.src)
+    .pipe(newer(move_sass.build))
+    .pipe(gulp.dest(move_sass.build));
+});
+
 // copy SASS parent
 gulp.task('move_sass_parent', () => {
   return gulp.src('assets/css/*.scss')
@@ -99,21 +112,6 @@ gulp.task('move_js', () => {
   return gulp.src('assets/js/**/*')
     .pipe(newer(dir.build + '/assets/js/'))
     .pipe(gulp.dest(dir.build + '/assets/js/'));
-});
-
-// copy min js assets
-gulp.task('move_min_js', () => {
-  return gulp.src('assets/js/**/*.min.js')
-    .pipe(newer(dir.build + '/assets/js/'))
-    .pipe(gulp.dest(dir.build + '/assets/js/'));
-});
-
-
-// copy min css assets
-gulp.task('move_min_css', () => {
-  return gulp.src('assets/css/**/*.min.css')
-    .pipe(newer(dir.build + '/assets/css/'))
-    .pipe(gulp.dest(dir.build + '/assets/css/'));
 });
 
 gulp.task('move_css', () => {
@@ -142,6 +140,21 @@ gulp.task('clean_scss', function () {
         .pipe(clean());
 });
 
+// copy min js assets
+gulp.task('move_min_js', () => {
+  return gulp.src('assets/js/**/*.min.js')
+    .pipe(newer(dir.build + '/assets/js/'))
+    .pipe(gulp.dest(dir.build + '/assets/js/'));
+});
+
+// copy min css assets
+gulp.task('move_min_css', () => {
+  return gulp.src('assets/css/**/*.min.css')
+    .pipe(newer(dir.build + '/assets/css/'))
+    .pipe(gulp.dest(dir.build + '/assets/css/'));
+});
+
+
 // image settings
 const images = {
   src         : dir.src + 'assets/img/**/*',
@@ -162,6 +175,7 @@ gulp.task( "remove-lines-from-scss", function ( ) {
             "---\n# Front matter comment to ensure Jekyll properly reads file.\n---","") )
         .pipe( gulp.dest( "dist/assets/sass/" ) );
 });
+
 
 // CSS settings
 var css = {
@@ -188,29 +202,14 @@ var css = {
   ]
 };
 
-// CSS processing
-// gulp.task('css', ['images'], () => {
-//   return gulp.src(css.src)
-//     .pipe(sass(css.sassOpts))
-//     .pipe(postcss(css.processors))
-//     .pipe(gulp.dest(css.build))
-//     .pipe(browsersync ? browsersync.reload({ stream: true }) : gutil.noop());
-// });
 
 // Zip files up
 gulp.task('zip', function () {
  return gulp.src('dist/**/*')
-  .pipe(zip(productname + '-' + version + '.zip'))
+  .pipe(zip(productname + '-html-' + version + '.zip'))
   .pipe(gulp.dest('.'));
 });
 
-// gulp.task('prettify', function() {
-//   gulp.src('dist/**/*.html')
-//     .pipe(prettify({indent_char: ' ', indent_size: 2}))
-//     .pipe(gulp.dest('dist/'))
-// });
-
-//  'dist/assets/sass/*.css'
 
 gulp.task('prettify-html', function() {
   gulp.src(['_site/**/*.html'])
@@ -250,7 +249,7 @@ gulp.task('prettify-css', function() {
 });
 
 gulp.task('prettify-js', function() {
-  gulp.src(['_site/assets/js/**/*.js','!_site/assets/js/**/*.min.js'])
+  gulp.src(['_site/assets/js/**/*.js', '!_site/assets/js/**/*.min.js'])
     .pipe(prettify({
         "js": {
             "allowed_file_extensions": ["js", "json", "jshintrc", "jsbeautifyrc"],
@@ -278,51 +277,6 @@ gulp.task('prettify-js', function() {
     .pipe(gulp.dest('dist/assets/js'));
 });
 
-
-// compiles less files and outputs them to css
-// gulp.task('compile-less', function() {
-//     return gulp.src(path.join(cssPath, '*.less'))
-//         .pipe(less())
-//         .pipe(gulp.dest(cssPath));
-// });
-
-// Builds the static website with Jekyll
-// gulp.task('jekyll', ['compile-less'], function(done) {
-//     execute('jekyll build --future --destination '
-//         + path.join('..', websiteOutputDirectory), {
-//         cwd: websiteInputDirectory
-//     }, done);
-// });
-//
-// function execute (cmd, opts, done) {
-//     util.log(util.colors.cyan(cmd));
-//     exec(cmd, opts,
-//         function (error, stdout, stderr) {
-//             util.log(util.colors.cyan(stdout));
-//             util.log(util.colors.red(stderr));
-//             done(error);
-//         }
-//     );
-// }
-
-// // Validates html and links
-// gulp.task('html-proofer', function(done) {
-//     execute('htmlproof ' +
-//         buildOutputDirectory +
-//         // html-proofer options
-//     , done());
-// });
-//
-// function execute (cmd, opts, done) {
-//     util.log(util.colors.cyan(cmd));
-//     exec(cmd, opts,
-//         function (error, stdout, stderr) {
-//             util.log(util.colors.cyan(stdout));
-//             util.log(util.colors.red(stderr));
-//             done(error);
-//         }
-//     );
-// }
 
 gulp.task('lint-css', function lintCssTask() {
   const gulpStylelint = require('gulp-stylelint');
@@ -358,10 +312,7 @@ gulp.task('prettify',['prettify-html','prettify-css','prettify-js'], () => {
     gutil.log('Finished prettify');
 });
 
+// run all tasks old
+//gulp.task('build', ['prettify','move_sass', 'move_images', 'move_md', 'move_fonts','clean_scss','move_sass_parent']);
 
-// run all tasks
 gulp.task('build', ['prettify', 'move_md', 'move_sass', 'move_cssdoc', 'move_images', 'move_min_js', 'move_min_css', 'move_fonts','clean_scss','move_sass_parent','remove-lines-from-scss']);
-
-
-// run all tasks
-// gulp.task('live_demo', ['move_html', 'move_css','move_js','move_sass_parent','move_sass', 'images', 'move_fonts','clean_scss']);
