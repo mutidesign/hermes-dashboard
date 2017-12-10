@@ -1,8 +1,11 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="viewport" content="width=device-width" />
+
 <meta name="description" content="{{ page.description | default: site.description }}">
 <meta name="author" content="{{ site.authors }}">
 <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <title>
   {%- if page.title -%}
@@ -15,19 +18,22 @@
 <!-- Bootstrap core CSS -->
 <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Font Awesome -->
+<!-- Fonts by Google and Icons by Font Awesome -->
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-
-<link href="./assets/css/docs.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Lobster|Montserrat:400,500,600' rel='stylesheet' type='text/css'>
+<link href="./assets/css/hermes-icons.css" rel="stylesheet">
 
 <link href="./assets/css/hd.min.css" rel="stylesheet">
 
-<link href="./assets/css/hermes-icons.css" rel="stylesheet">
+<!-- Documentation CSS -->
+<link href="./assets/css/docs.min.css" rel="stylesheet">
+
 
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-{% include favicons.html %}
+{% include fav
+    icons.html %}
 
 {%- if jekyll.environment == "production" -%}
     sunt pe production

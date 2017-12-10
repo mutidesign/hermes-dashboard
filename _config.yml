@@ -36,6 +36,9 @@ exclude:
   - package-lock.json
   - sache.json
   - twbsconfig.yml
+  - gulpfile.js
+  - Gruntfile.js
+  - sw.js
 
 plugins:
   - jekyll-redirect-from
