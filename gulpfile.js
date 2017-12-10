@@ -1,15 +1,15 @@
 // Gulp.js configuration
 'use strict';
 
-const productname = 'light-bootstrap-dashboard-pro',
-      version = 'v2.0.0';
+const productname = 'hermes-dashboard',
+      version = 'v1.0.0';
 
 const
 
   // source and build folders
   dir = {
     src         : '_site/',
-    build       : 'dist/'
+    build       : '_gh_pages/'
   },
 
   // Gulp and plugins
@@ -229,7 +229,7 @@ gulp.task('prettify-html', function() {
             "wrap_line_length": 0 // Lines should wrap at next opportunity after this number of characters (0 disables)
         }
     }))
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest(dir.build));
 });
 
 gulp.task('prettify-css', function() {
@@ -245,7 +245,7 @@ gulp.task('prettify-css', function() {
             "selector_separator_newline": true // Separate selectors with newline or not (e.g. "a,\nbr" or "a, br")
         }
     }))
-    .pipe(gulp.dest('dist/assets/css/'));
+    .pipe(gulp.dest(dir.build + '/assets/css/'));
 });
 
 gulp.task('prettify-js', function() {

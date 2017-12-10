@@ -1,4 +1,4 @@
-type = ['', 'info', 'success', 'warning', 'danger'];
+var type = ['', 'info', 'success', 'warning', 'danger'];
 
 var seq = 0,
     delays = 80,
